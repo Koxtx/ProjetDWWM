@@ -659,124 +659,169 @@
     "imageLink": "https://exemple.com/pad_thai_aux_crevettes.jpg",
     "preparation": "Faites cuire les crevettes dans une poêle, faites cuire les nouilles de riz selon les instructions, faites sauter les légumes et les œufs, ajoutez les crevettes cuites et les nouilles, assaisonnez avec la sauce soja et la sauce tamarin, servez garni de cacahuètes concassées."
   },
+
   {
-    "id": "1",
+    "id": "41",
     "mealType": "Dessert",
-    "name": "Tarte aux pommes",
-    "ingredients": ["pâte feuilletée", "pommes", "sucre", "cannelle"],
-    "proteinContent": "2g",
-    "calories": "250",
-    "imageLink": "https://exemple.com/tarte_aux_pommes.jpg",
-    "preparation": "Étalez la pâte feuilletée dans un moule à tarte, disposez les tranches de pommes sur la pâte, saupoudrez de sucre et de cannelle, faites cuire au four jusqu'à ce que la croûte soit dorée."
-  },
-  {
-    "id": "2",
-    "mealType": "Dessert",
-    "name": "Fondant au chocolat",
-    "ingredients": ["chocolat noir", "beurre", "sucre", "œufs", "farine"],
-    "proteinContent": "5g",
+    "name": "Pudding protéiné à la vanille",
+    "ingredients": [
+      "protéine en poudre (saveur vanille)",
+      "lait d'amande",
+      "graines de chia",
+      "miel",
+      "vanille"
+    ],
+    "proteinContent": "20g",
     "calories": "300",
-    "imageLink": "https://exemple.com/fondant_au_chocolat.jpg",
-    "preparation": "Faites fondre le chocolat noir et le beurre au bain-marie, mélangez avec le sucre, les œufs et la farine, versez dans des moules individuels et faites cuire au four jusqu'à ce que le centre soit encore légèrement mou."
+    "imageLink": "https://exemple.com/pudding_proteine_a_la_vanille.jpg",
+    "preparation": "Mélangez tous les ingrédients dans un bol, laissez reposer au réfrigérateur pendant au moins 2 heures ou toute la nuit."
   },
   {
-    "id": "3",
+    "id": "42",
     "mealType": "Dessert",
-    "name": "Crème brûlée",
-    "ingredients": ["crème liquide", "sucre", "œufs", "vanille"],
-    "proteinContent": "4g",
+    "name": "Barres énergétiques aux noix et aux dattes",
+    "ingredients": [
+      "dattes",
+      "noix de cajou",
+      "amandes",
+      "noix",
+      "cacao en poudre",
+      "protéine en poudre (saveur chocolat)",
+      "miel"
+    ],
+    "proteinContent": "15g",
+    "calories": "250",
+    "imageLink": "https://exemple.com/barres_energetiques_aux_noix_et_aux_dattes.jpg",
+    "preparation": "Mixez tous les ingrédients dans un mixeur, formez des barres avec le mélange, laissez durcir au réfrigérateur avant de déguster."
+  },
+  {
+    "id": "43",
+    "mealType": "Dessert",
+    "name": "Mousse au chocolat protéinée",
+    "ingredients": [
+      "protéine en poudre (saveur chocolat)",
+      "lait d'amande",
+      "yaourt grec",
+      "cacao en poudre",
+      "miel"
+    ],
+    "proteinContent": "25g",
     "calories": "350",
-    "imageLink": "https://exemple.com/creme_brulee.jpg",
-    "preparation": "Faites chauffer la crème avec la vanille, fouettez les œufs avec le sucre, incorporez la crème chaude, versez dans des ramequins et faites cuire au four, puis réfrigérez, saupoudrez de sucre et caramélisez au chalumeau."
+    "imageLink": "https://exemple.com/mousse_au_chocolat_proteinee.jpg",
+    "preparation": "Mélangez tous les ingrédients dans un bol jusqu'à obtenir une consistance lisse, réfrigérez pendant au moins 1 heure avant de servir."
   },
   {
-    "id": "4",
+    "id": "44",
     "mealType": "Dessert",
-    "name": "Salade de fruits frais",
+    "name": "Pancakes protéinés aux myrtilles",
     "ingredients": [
-      "fraises",
-      "ananas",
-      "kiwi",
-      "mangue",
-      "menthe",
-      "jus d'orange"
-    ],
-    "proteinContent": "2g",
-    "calories": "200",
-    "imageLink": "https://exemple.com/salade_de_fruits_frais.jpg",
-    "preparation": "Coupez les fruits en morceaux, mélangez avec de la menthe ciselée et du jus d'orange."
-  },
-  {
-    "id": "5",
-    "mealType": "Dessert",
-    "name": "Gâteau au yaourt",
-    "ingredients": [
-      "yaourt nature",
+      "flocons d'avoine",
+      "protéine en poudre (saveur vanille)",
       "œufs",
-      "farine",
-      "sucre",
-      "levure chimique"
+      "banane écrasée",
+      "myrtilles"
     ],
-    "proteinContent": "6g",
-    "calories": "280",
-    "imageLink": "https://exemple.com/gateau_au_yaourt.jpg",
-    "preparation": "Mélangez tous les ingrédients, versez dans un moule à gâteau et faites cuire au four jusqu'à ce qu'il soit doré et qu'un couteau en ressorte propre."
+    "proteinContent": "20g",
+    "calories": "300",
+    "imageLink": "https://exemple.com/pancakes_proteines_aux_myrtilles.jpg",
+    "preparation": "Mixez les flocons d'avoine dans un mixeur pour en faire de la farine, mélangez avec la protéine en poudre, les œufs et la banane, faites cuire des pancakes dans une poêle antiadhésive, garnissez de myrtilles avant de servir."
   },
   {
-    "id": "6",
+    "id": "45",
     "mealType": "Dessert",
-    "name": "Panna cotta à la vanille",
-    "ingredients": ["crème liquide", "sucre", "gélatine", "vanille"],
-    "proteinContent": "3g",
+    "name": "Tartelette aux fruits rouges et à la crème vanille",
+    "ingredients": [
+      "pâte sablée",
+      "yaourt grec",
+      "protéine en poudre (saveur vanille)",
+      "miel",
+      "fruits rouges"
+    ],
+    "proteinContent": "18g",
     "calories": "320",
-    "imageLink": "https://exemple.com/panna_cotta_a_la_vanille.jpg",
-    "preparation": "Faites chauffer la crème avec le sucre et la vanille, ajoutez la gélatine ramollie, versez dans des moules individuels et réfrigérez jusqu'à ce que la panna cotta soit prise."
+    "imageLink": "https://exemple.com/tartelette_aux_fruits_rouges_et_a_la_creme_vanille.jpg",
+    "preparation": "Étalez la pâte sablée dans des moules à tartelettes, faites cuire au four jusqu'à ce que la croûte soit dorée, mélangez le yaourt grec avec la protéine en poudre et le miel, garnissez les tartelettes avec ce mélange et les fruits rouges."
   },
   {
-    "id": "7",
+    "id": "46",
     "mealType": "Dessert",
-    "name": "Tiramisu",
+    "name": "Crêpes protéinées à la banane et au chocolat",
+    "ingredients": [
+      "farine d'avoine",
+      "protéine en poudre (saveur vanille)",
+      "banane écrasée",
+      "œufs",
+      "lait d'amande",
+      "pépites de chocolat noir"
+    ],
+    "proteinContent": "22g",
+    "calories": "350",
+    "imageLink": "https://exemple.com/crepes_proteinees_a_la_banane_et_au_chocolat.jpg",
+    "preparation": "Mélangez tous les ingrédients dans un bol jusqu'à obtenir une pâte lisse, faites cuire des crêpes dans une poêle antiadhésive, garnissez de pépites de chocolat noir avant de servir."
+  },
+  {
+    "id": "47",
+    "mealType": "Dessert",
+    "name": "Gâteau au fromage protéiné aux fruits rouges",
+    "ingredients": [
+      "fromage blanc",
+      "protéine en poudre (saveur vanille)",
+      "œufs",
+      "miel",
+      "fruits rouges"
+    ],
+    "proteinContent": "30g",
+    "calories": "400",
+    "imageLink": "https://exemple.com/gateau_au_fromage_proteine_aux_fruits_rouges.jpg",
+    "preparation": "Mélangez tous les ingrédients dans un bol, versez dans un moule à gâteau, faites cuire au four jusqu'à ce que le gâteau soit pris, garnissez de fruits rouges avant de servir."
+  },
+  {
+    "id": "48",
+    "mealType": "Dessert",
+    "name": "Brownies protéinés aux noix",
+    "ingredients": [
+      "banane écrasée",
+      "protéine en poudre (saveur chocolat)",
+      "cacao en poudre",
+      "farine d'amande",
+      "œufs",
+      "noix concassées"
+    ],
+    "proteinContent": "18g",
+    "calories": "300",
+    "imageLink": "https://exemple.com/brownies_proteines_aux_noix.jpg",
+    "preparation": "Mélangez tous les ingrédients dans un bol, versez dans un moule à brownie, faites cuire au four jusqu'à ce que le brownie soit cuit, laissez refroidir avant de couper en morceaux."
+  },
+  {
+    "id": "49",
+    "mealType": "Dessert",
+    "name": "Tiramisu protéiné aux fraises",
     "ingredients": [
       "biscuits à la cuillère",
-      "café fort",
-      "mascarpone",
-      "sucre",
-      "œufs",
-      "cacao en poudre"
+      "fromage blanc",
+      "protéine en poudre (saveur vanille)",
+      "fraises",
+      "café fort"
     ],
-    "proteinContent": "7g",
+    "proteinContent": "25g",
     "calories": "350",
-    "imageLink": "https://exemple.com/tiramisu.jpg",
-    "preparation": "Trempez les biscuits dans le café, disposez-les dans un plat, mélangez le mascarpone avec le sucre et les jaunes d'œufs, montez les blancs en neige et incorporez-les délicatement, versez sur les biscuits, saupoudrez de cacao et réfrigérez."
+    "imageLink": "https://exemple.com/tiramisu_proteine_aux_fraises.jpg",
+    "preparation": "Trempez les biscuits à la cuillère dans le café fort, disposez-les dans un plat, mélangez le fromage blanc avec la protéine en poudre, versez sur les biscuits, garnissez de fraises tranchées, réfrigérez pendant au moins 2 heures avant de servir."
   },
   {
-    "id": "8",
+    "id": "50",
     "mealType": "Dessert",
-    "name": "Mousse au chocolat",
-    "ingredients": ["chocolat noir", "œufs", "sucre"],
-    "proteinContent": "4g",
-    "calories": "280",
-    "imageLink": "https://exemple.com/mousse_au_chocolat.jpg",
-    "preparation": "Faites fondre le chocolat au bain-marie, fouettez les blancs d'œufs en neige avec le sucre, incorporez délicatement le chocolat fondu, réfrigérez jusqu'à ce que la mousse soit prise."
-  },
-  {
-    "id": "9",
-    "mealType": "Dessert",
-    "name": "Clafoutis aux cerises",
-    "ingredients": ["cerises", "œufs", "sucre", "farine", "lait", "vanille"],
-    "proteinContent": "5g",
+    "name": "Smoothie bowl à la mangue et à la noix de coco",
+    "ingredients": [
+      "mangue congelée",
+      "yaourt grec",
+      "lait de coco",
+      "protéine en poudre (saveur vanille)",
+      "noix de coco râpée"
+    ],
+    "proteinContent": "20g",
     "calories": "300",
-    "imageLink": "https://exemple.com/clafoutis_aux_cerises.jpg",
-    "preparation": "Disposez les cerises dans un moule, mélangez les œufs avec le sucre, la farine, le lait et la vanille, versez sur les cerises et faites cuire au four jusqu'à ce que le clafoutis soit doré."
-  },
-  {
-    "id": "10",
-    "mealType": "Dessert",
-    "name": "Crêpes aux fraises",
-    "ingredients": ["farine", "œufs", "lait", "sucre", "beurre", "fraises"],
-    "proteinContent": "5g",
-    "calories": "250",
-    "imageLink": "https://exemple.com/crepes_aux_fraises.jpg",
-    "preparation": "Préparez une pâte à crêpes avec la farine, les œufs, le lait et le sucre, faites cuire les crêpes dans une poêle, garnissez de fraises coupées en morceaux et de sucre glace."
+    "imageLink": "https://exemple.com/smoothie_bowl_a_la_mangue_et_a_la_noix_de_coco.jpg",
+    "preparation": "Mixez la mangue, le yaourt grec, le lait de coco et la protéine en poudre dans un blender jusqu'à consistance lisse, versez dans un bol, garnissez de noix de coco râpée."
   }
 ]

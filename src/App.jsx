@@ -35,19 +35,18 @@ function App() {
     }
     getAllExercices();
     getAllRecettes();
-
   }, []);
- 
-
 
   function toggleLiked(i) {
     console.log(i);
-    setTeams(teams.map((e) => (e._id === i ? { ...e, liked: !e.liked } : e)));
+    setExercices(
+      exercices.map((e) => (e._id === i ? { ...e, liked: !e.liked } : e))
+    );
   }
 
   return (
     <div
-      className={`
+      className={`mhFull
      ${styles.main}`}
     >
       <Header />

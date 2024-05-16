@@ -6,7 +6,7 @@ export default function ExExos() {
   const { exercices } = useOutletContext();
   return (
     <main className="mhFull">
-      <h2>Exercices :</h2>
+      <h2 className="ml-10">Exercices :</h2>
 
       <div className="d-flex flex-wrap justify-content-center">
         {exercices.map((e) => (

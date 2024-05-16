@@ -8,19 +8,25 @@ export default function Header() {
       <div
         className={`d-flex flex-fill flex-row justify-content-center align-items-center  p-10 ${styles.nav1}`}
       >
-        <NavLink className=" btn " to="/">
+        <NavLink className={`mr-15`} to="/">
           <img src={logo} className={`${styles.logo} `} alt="GoIt" />
         </NavLink>
 
         <nav className="d-flex flex-row  align-items-center  ">
-          <NavLink className=" btn mr-150" to="/">
+          <NavLink className=" btn mr-60" to="/">
             Acceuil
           </NavLink>
-          <NavLink className=" btn mr-150" to="/Séance">
+          <NavLink className=" btn mr-60" to="/Séance">
             Séance
           </NavLink>
-          <NavLink className="btn " to="/Alimentation">
+          <NavLink className="btn mr-60 " to="/Alimentation">
             Alimentation
+          </NavLink>
+          <NavLink className="btn mr-60 " to="/Exercices">
+            Exercices
+          </NavLink>
+          <NavLink className="btn " to="/Recettes">
+            Recettes
           </NavLink>
         </nav>
       </div>
