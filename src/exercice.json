@@ -1,0 +1,431 @@
+[
+  {
+    "id": "1",
+    "name": "Deadlift",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/deadlift.gif"
+  },
+  {
+    "id": "2",
+    "name": "Bent Over Barbell Row",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/bent-over-barbell-row.gif"
+  },
+  {
+    "id": "3",
+    "name": "Pull-ups",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/pull-ups.gif"
+  },
+  {
+    "id": "4",
+    "name": "T-Bar Row",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/t-bar-row.gif"
+  },
+  {
+    "id": "5",
+    "name": "Seated Cable Rows",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Cable machine",
+    "image": "https://cdn.exowatts.com/images/exercises/seated-cable-rows.gif"
+  },
+  {
+    "id": "6",
+    "name": "Single Arm Dumbbell Row",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/single-arm-dumbbell-row.gif"
+  },
+  {
+    "id": "7",
+    "name": "Wide Grip Lat Pulldown",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Lat pulldown machine",
+    "image": "https://cdn.exowatts.com/images/exercises/wide-grip-lat-pulldown.gif"
+  },
+  {
+    "id": "8",
+    "name": "Hyperextensions",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/hyperextensions.gif"
+  },
+  {
+    "id": "9",
+    "name": "Barbell Shrugs",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/barbell-shrugs.gif"
+  },
+  {
+    "id": "10",
+    "name": "Reverse Flyes",
+    "bodyPart": "Dos",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/reverse-flyes.gif"
+  },
+  {
+    "id": "11",
+    "name": "Bench Press",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/bench-press.gif"
+  },
+  {
+    "id": "12",
+    "name": "Push-ups",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/push-ups.gif"
+  },
+  {
+    "id": "11",
+    "name": "Bench Press",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/bench-press.gif"
+  },
+  {
+    "id": "12",
+    "name": "Push-ups",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/push-ups.gif"
+  },
+  {
+    "id": "13",
+    "name": "Dumbbell Flyes",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/dumbbell-flyes.gif"
+  },
+  {
+    "id": "14",
+    "name": "Incline Bench Press",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/incline-bench-press.gif"
+  },
+  {
+    "id": "15",
+    "name": "Chest Dips",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Parallel bars",
+    "image": "https://cdn.exowatts.com/images/exercises/chest-dips.gif"
+  },
+  {
+    "id": "16",
+    "name": "Cable Crossover",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Cable machine",
+    "image": "https://cdn.exowatts.com/images/exercises/cable-crossover.gif"
+  },
+  {
+    "id": "17",
+    "name": "Decline Bench Press",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/decline-bench-press.gif"
+  },
+  {
+    "id": "18",
+    "name": "Pec Deck Machine",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Pec deck machine",
+    "image": "https://cdn.exowatts.com/images/exercises/pec-deck-machine.gif"
+  },
+  {
+    "id": "19",
+    "name": "Incline Dumbbell Press",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/incline-dumbbell-press.gif"
+  },
+  {
+    "id": "20",
+    "name": "Barbell Pullover",
+    "bodyPart": "Pectoraux",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/barbell-pullover.gif"
+  },
+  {
+    "id": "21",
+    "name": "Military Press",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/military-press.gif"
+  },
+  {
+    "id": "22",
+    "name": "Dumbbell Shoulder Press",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/dumbbell-shoulder-press.gif"
+  },
+  {
+    "id": "23",
+    "name": "Lateral Raises",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/lateral-raises.gif"
+  },
+  {
+    "id": "24",
+    "name": "Front Raises",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/front-raises.gif"
+  },
+  {
+    "id": "25",
+    "name": "Arnold Press",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/arnold-press.gif"
+  },
+  {
+    "id": "26",
+    "name": "Upright Rows",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/upright-rows.gif"
+  },
+  {
+    "id": "27",
+    "name": "Face Pulls",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Cable machine",
+    "image": "https://cdn.exowatts.com/images/exercises/face-pulls.gif"
+  },
+  {
+    "id": "28",
+    "name": "Seated Dumbbell Lateral Raises",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/seated-dumbbell-lateral-raises.gif"
+  },
+
+  {
+    "id": "29",
+    "name": "Reverse Pec Deck Flyes",
+    "bodyPart": "Épaules",
+    "equipmentUsed": "Pec deck machine",
+    "image": "https://cdn.exowatts.com/images/exercises/reverse-pec-deck-flyes.gif"
+  },
+  {
+    "id": "30",
+    "name": "Barbell Biceps Curl",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/barbell-biceps-curl.gif"
+  },
+  {
+    "id": "31",
+    "name": "Dumbbell Hammer Curls",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/dumbbell-hammer-curls.gif"
+  },
+  {
+    "id": "32",
+    "name": "Triceps Dips",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Parallel bars",
+    "image": "https://cdn.exowatts.com/images/exercises/triceps-dips.gif"
+  },
+  {
+    "id": "33",
+    "name": "Skull Crushers",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/skull-crushers.gif"
+  },
+  {
+    "id": "34",
+    "name": "Preacher Curls",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Preacher bench and barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/preacher-curls.gif"
+  },
+  {
+    "id": "35",
+    "name": "Triceps Pushdown",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Cable machine",
+    "image": "https://cdn.exowatts.com/images/exercises/triceps-pushdown.gif"
+  },
+  {
+    "id": "36",
+    "name": "Concentration Curls",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/concentration-curls.gif"
+  },
+  {
+    "id": "37",
+    "name": "Close Grip Bench Press",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/close-grip-bench-press.gif"
+  },
+  {
+    "id": "38",
+    "name": "Hammer Curls",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/hammer-curls.gif"
+  },
+  {
+    "id": "39",
+    "name": "Triceps Kickbacks",
+    "bodyPart": "Bras",
+    "equipmentUsed": "Dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/triceps-kickbacks.gif"
+  },
+  {
+    "id": "40",
+    "name": "Crunches",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/crunches.gif"
+  },
+  {
+    "id": "41",
+    "name": "Plank",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/plank.gif"
+  },
+  {
+    "id": "42",
+    "name": "Russian Twists",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight or dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/russian-twists.gif"
+  },
+  {
+    "id": "43",
+    "name": "Leg Raises",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/leg-raises.gif"
+  },
+  {
+    "id": "44",
+    "name": "Bicycle Crunches",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/bicycle-crunches.gif"
+  },
+  {
+    "id": "45",
+    "name": "Hanging Leg Raises",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Pull-up bar",
+    "image": "https://cdn.exowatts.com/images/exercises/hanging-leg-raises.gif"
+  },
+  {
+    "id": "46",
+    "name": "Flutter Kicks",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/flutter-kicks.gif"
+  },
+  {
+    "id": "47",
+    "name": "Reverse Crunches",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Body-weight",
+    "image": "https://cdn.exowatts.com/images/exercises/reverse-crunches.gif"
+  },
+  {
+    "id": "48",
+    "name": "Cable Crunches",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Cable machine",
+    "image": "https://cdn.exowatts.com/images/exercises/cable-crunches.gif"
+  },
+  {
+    "id": "49",
+    "name": "Ab Wheel Rollout",
+    "bodyPart": "Abdos",
+    "equipmentUsed": "Ab wheel",
+    "image": "https://cdn.exowatts.com/images/exercises/ab-wheel-rollout.gif"
+  },
+  {
+    "id": "50",
+    "name": "Squats",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/squats.gif"
+  },
+  {
+    "id": "51",
+    "name": "Lunges",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Body-weight or dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/lunges.gif"
+  },
+  {
+    "id": "52",
+    "name": "Leg Press",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Leg press machine",
+    "image": "https://cdn.exowatts.com/images/exercises/leg-press.gif"
+  },
+  {
+    "id": "53",
+    "name": "Deadlifts",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/deadlifts.gif"
+  },
+
+  {
+    "id": "54",
+    "name": "Calf Raises",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Body-weight or machine",
+    "image": "https://cdn.exowatts.com/images/exercises/calf-raises.gif"
+  },
+  {
+    "id": "55",
+    "name": "Leg Extensions",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Leg extension machine",
+    "image": "https://cdn.exowatts.com/images/exercises/leg-extensions.gif"
+  },
+  {
+    "id": "56",
+    "name": "Hack Squats",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Hack squat machine",
+    "image": "https://cdn.exowatts.com/images/exercises/hack-squats.gif"
+  },
+  {
+    "id": "57",
+    "name": "Romanian Deadlift",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Barbell or dumbbell",
+    "image": "https://cdn.exowatts.com/images/exercises/romanian-deadlift.gif"
+  },
+  {
+    "id": "58",
+    "name": "Step-ups",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Bench or step",
+    "image": "https://cdn.exowatts.com/images/exercises/step-ups.gif"
+  },
+  {
+    "id": "59",
+    "name": "Good Mornings",
+    "bodyPart": "Jambes",
+    "equipmentUsed": "Barbell",
+    "image": "https://cdn.exowatts.com/images/exercises/good-mornings.gif"
+  }
+]
