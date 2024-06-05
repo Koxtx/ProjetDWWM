@@ -1,32 +1,34 @@
 import React, { useState } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { signin } from "../../apis/users";
-import { Link, useNavigate } from "react-router-dom";
+import { resetpassword } from "../../apis/users";
 import Modal from "../../compenants/modal/Modal";
 
-export default function Connexion() {
+export default function ResetPassword() {
   const [feedback, setFeedback] = useState("");
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-  // schéma de validation
+  const { token } = useParams();
+  const decodedToken = JSON.parse(atob(token.split(".")[1]));
+
   const schema = yup.object({
-    email: yup
+    password: yup
       .string()
-      .email()
-      .required("Required")
-      .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g, "Mail not valid"),
-    password: yup.string().required("Required"),
+      .required("Le mot de passe est obligatoire")
+      .min(5, "trop court")
+      .max(10, "trop long"),
+    confirmPassword: yup
+      .string()
+      .required("Vous devez confirmer votre mot de passe")
+      .oneOf([yup.ref("password"), ""], "Les mots ne correspondent pas"),
   });
 
-  //   valeurs par défaut
   const defaultValues = {
-    email: "",
-    password: "",
+    email: decodedToken.email,
   };
 
-  //   méthodes utilisées par useForm et options : resolver fait le lien entre le formulaire et le schéma
   const {
     register,
     handleSubmit,
@@ -38,18 +40,13 @@ export default function Connexion() {
     resolver: yupResolver(schema),
   });
 
-  //   fonction de validation de formulaire
   async function submit(values) {
     console.log(values);
     try {
-      const response = await signin(values);
-      if (!response.message) {
-        setFeedback("Connexion réussie");
+      const response = await resetpassword(values);
+      setFeedback(response.message);
+      if (response.message !== "erreur") {
         reset(defaultValues);
-        setShowModal(true);
-      } else {
-        setFeedback(response.message);
-        setShowModal(true);
       }
       setShowModal(true);
     } catch (error) {
@@ -59,25 +56,13 @@ export default function Connexion() {
 
   function handleCloseModal() {
     setShowModal(false);
-    if (feedback === "Connexion réussie") {
-      navigate("/");
+    if (feedback !== "erreur") {
+      navigate("/connexion");
     }
   }
   return (
-    <div className="d-flex flex-column center flex-fill">
+    <div className="d-flex center flex-column flex-fill">
       <form onSubmit={handleSubmit(submit)}>
-        <div className="d-flex flex-column mb-10">
-          <label htmlFor="email" className="mb-10">
-            Email
-          </label>
-          <input
-            {...register("email")}
-            type="email"
-            id="email"
-            className="mb-10"
-          />
-          {errors.email && <p className="text-error">{errors.email.message}</p>}
-        </div>
         <div className="d-flex flex-column mb-10">
           <label htmlFor="password" className="mb-10">
             Mot de passe
@@ -92,15 +77,26 @@ export default function Connexion() {
             <p className="text-error">{errors.password.message}</p>
           )}
         </div>
+        <div className="d-flex flex-column mb-10">
+          <label htmlFor="confirmPassword" className="mb-10">
+            Confirmation de mot de passe
+          </label>
+          <input
+            {...register("confirmPassword")}
+            type="password"
+            id="confirmPassword"
+            className="mb-10"
+          />
+          {errors.confirmPassword && (
+            <p className="text-error">{errors.confirmPassword.message}</p>
+          )}
+        </div>
         <button className="btn btn-primary">Submit</button>
-        <Link style={{ color: "red" }} to="/forgetpassword">
-          mot de passe oublié
-        </Link>
       </form>
       {showModal && (
         <Modal onClose={handleCloseModal} feedback={feedback}>
           <button
-            className={`btn btn-reverse-primary`}
+            className="btn btn-reverse-primary"
             onClick={handleCloseModal}
           >
             X

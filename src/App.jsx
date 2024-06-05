@@ -3,6 +3,7 @@ import Footer from "./compenants/Footer/Footer";
 import styles from "./App.module.scss";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { useState, useEffect } from "react";
+import UserProvider from "./compenants/Providers/UserProvider";
 
 function App() {
   const [exercices, setExercices] = useState([]);
@@ -49,10 +50,12 @@ function App() {
       className={`mhFull
      ${styles.main}`}
     >
+      <UserProvider>
       <Header />
       <Outlet context={{ exercices, toggleLiked, recettes }} />
       <Footer />
       <ScrollRestoration />
+      </UserProvider>
     </div>
   );
 }

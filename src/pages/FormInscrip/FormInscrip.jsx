@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signup } from "../../apis/users";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "../../compenants/modal/Modal";
 
 export default function FormInscrip() {
@@ -138,7 +138,7 @@ export default function FormInscrip() {
               className="mr-15"
               id="rgpd"
             />
-            En soumettant ce formulaire j'accepte ...
+           J'accepte la collecte et le traitement de mes données personnelles conformément à la <Link to="/politiquedeconfidentialité">politique de confidentialité</Link>
           </label>
           {errors.rgpd && <p className="text-error">{errors.rgpd.message}</p>}
         </div>
