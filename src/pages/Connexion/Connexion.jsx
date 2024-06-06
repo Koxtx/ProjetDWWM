@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signin } from "../../apis/users";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "../../compenants/modal/Modal";
+import { UserContext } from "../../context/UserContext";
 
 export default function Connexion() {
   const [feedback, setFeedback] = useState("");
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const { setConnectedUser } = useContext(UserContext);
+
   // schéma de validation
   const schema = yup.object({
     email: yup
@@ -40,10 +43,12 @@ export default function Connexion() {
 
   //   fonction de validation de formulaire
   async function submit(values) {
-    console.log(values);
+    // console.log(values);
     try {
       const response = await signin(values);
+      // console.log(response);
       if (!response.message) {
+        setConnectedUser(response.user);
         setFeedback("Connexion réussie");
         reset(defaultValues);
         setShowModal(true);
@@ -64,7 +69,7 @@ export default function Connexion() {
     }
   }
   return (
-    <div className="d-flex flex-column center flex-fill">
+    <main className="d-flex flex-column center flex-fill">
       <form onSubmit={handleSubmit(submit)}>
         <div className="d-flex flex-column mb-10">
           <label htmlFor="email" className="mb-10">
@@ -107,6 +112,6 @@ export default function Connexion() {
           </button>
         </Modal>
       )}
-    </div>
+    </main>
   );
 }

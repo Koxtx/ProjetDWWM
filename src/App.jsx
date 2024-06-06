@@ -51,10 +51,10 @@ function App() {
      ${styles.main}`}
     >
       <UserProvider>
-      <Header />
-      <Outlet context={{ exercices, toggleLiked, recettes }} />
-      <Footer />
-      <ScrollRestoration />
+        <Header />
+        <Outlet context={{ exercices, toggleLiked, recettes }} />
+        <Footer />
+        <ScrollRestoration />
       </UserProvider>
     </div>
   );

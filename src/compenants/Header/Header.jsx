@@ -6,6 +6,7 @@ import { UserContext } from "../../context/UserContext";
 
 export default function Header() {
   const { user } = useContext(UserContext);
+  console.log(user);
   return (
     <header className="d-flex flex-row justify-content-center align-items-center  ">
       <div
@@ -19,18 +20,17 @@ export default function Header() {
           <NavLink className=" btn mr-60" to="/">
             Acceuil
           </NavLink>
-          {
-            user?
+          {user ? (
             <>
-            <NavLink className=" btn mr-60" to="/Séance">
-            Séance
-          </NavLink>
-          <NavLink className="btn mr-60 " to="/Alimentation">
-            Alimentation
-          </NavLink></>
-          :null
-          }
-          
+              <NavLink className=" btn mr-60" to="/Séance">
+                Séance
+              </NavLink>
+              <NavLink className="btn mr-60 " to="/Alimentation">
+                Alimentation
+              </NavLink>
+            </>
+          ) : null}
+
           <NavLink className="btn mr-60 " to="/Exercices">
             Exercices
           </NavLink>
@@ -40,31 +40,29 @@ export default function Header() {
         </nav>
       </div>
       <div
-        className={`d-flex flex-fill flex-row justify-content-center align-items-center  p-10 ${styles.nav2}`}
+        className={`d-flex flex-fill flex-row justify-content-end align-items-center  p-10 ${styles.nav2}`}
       >
-      <nav
-        className={`d-flex flex-row justify-content-center align-items-center  p-10 `}
-      >
-        {user ? (
-          <>
-            <NavLink className="mr-15" to="/profile">
-              <span>Profile</span>
-            </NavLink>
-            <NavLink className="mr-15" to="/logout">
-              <span>Logout</span>
-            </NavLink>
-          </>
-        ) : (
-          <>
-            <NavLink className="mr-15" to="/inscription">
-              <span>Register</span>
-            </NavLink>
-            <NavLink className="mr-15" to="/connexion">
-              <span>Login</span>
-            </NavLink>
-          </>
-        )}
-      </nav>
+        <nav className={` p-10 `}>
+          {user ? (
+            <>
+              <NavLink className="mr-15" to="/profile">
+                <span>Profile</span>
+              </NavLink>
+              <NavLink className="mr-15" to="/logout">
+                <span>Logout</span>
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink className="mr-15" to="/inscription">
+                <span>Register</span>
+              </NavLink>
+              <NavLink className="mr-15" to="/connexion">
+                <span>Login</span>
+              </NavLink>
+            </>
+          )}
+        </nav>
       </div>
     </header>
   );

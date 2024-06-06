@@ -8,11 +8,12 @@ export default function UserProvider({ children }) {
     const userStorage = JSON.parse(localStorage.getItem("user"));
     if (userStorage) {
       const { token, user } = userStorage;
-      if (isTokenValid(token)) {
-        setUser(user);
-      } else {
-        logoutConnectedUser();
-      }
+      setUser(user);
+      // if (isTokenValid(token)) {
+      //   setUser(user);
+      // } else {
+      //   logoutConnectedUser();
+      // }
     }
   }, []);
 

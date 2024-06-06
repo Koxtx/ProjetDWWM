@@ -29,53 +29,84 @@ export const router = createBrowserRouter([
       },
       {
         path: "/séance",
-        element: (<UserConnected><Seance /></UserConnected>
+        element: (
+          <UserConnected>
+            <Seance />
+          </UserConnected>
         ),
       },
       {
         path: "/alimentation",
-        element: (<UserConnected><Alimentation /></UserConnected>),
+        element: (
+          <UserConnected>
+            <Alimentation />
+          </UserConnected>
+        ),
       },
       {
         path: "/connexion",
-        element: (<UserNotConnected><Connexion /></UserNotConnected>),
+        element: (
+          <UserNotConnected>
+            <Connexion />
+          </UserNotConnected>
+        ),
       },
       {
         path: "/inscription",
-        element: (<UserNotConnected><FormInscrip /></UserNotConnected>),
+        element: (
+          <UserNotConnected>
+            <FormInscrip />
+          </UserNotConnected>
+        ),
       },
       {
         path: "/Exercices",
-        element: (<ExExos />),
+        element: <ExExos />,
       },
       {
         path: "/Recettes",
-        element: (<ExRecette />),
+        element: <ExRecette />,
       },
       {
         path: "/forgetpassword",
-        element: (<UserConnected><ForgetPassword /></UserConnected>),
+        element: (
+          <UserNotConnected>
+            <ForgetPassword />
+          </UserNotConnected>
+        ),
       },
       {
         path: "/resetpassword/:token",
-        element: (<UserConnected><ResetPassword /></UserConnected>),
+        element: (
+          <UserNotConnected>
+            <ResetPassword />
+          </UserNotConnected>
+        ),
       },
       {
         path: "/profile",
-        element: (<UserConnected><Profile /></UserConnected>),
+        element: (
+          <UserConnected>
+            <Profile />
+          </UserConnected>
+        ),
       },
       {
         path: "/logout",
-        element: (<UserConnected><Logout /></UserConnected>),
+        element: (
+          <UserConnected>
+            <Logout />
+          </UserConnected>
+        ),
       },
       {
-        path:"/mentionlegal",
-        element:<MentionLegal/>,
+        path: "/mentionlegal",
+        element: <MentionLegal />,
       },
       {
-        path:"/politiquedeconfidentialité",
-        element:<PolitiqueConfidentialite/>
-      }
+        path: "/politiquedeconfidentialité",
+        element: <PolitiqueConfidentialite />,
+      },
     ],
   },
 ]);

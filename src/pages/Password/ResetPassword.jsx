@@ -61,7 +61,7 @@ export default function ResetPassword() {
     }
   }
   return (
-    <div className="d-flex center flex-column flex-fill">
+    <main className="d-flex center flex-column flex-fill">
       <form onSubmit={handleSubmit(submit)}>
         <div className="d-flex flex-column mb-10">
           <label htmlFor="password" className="mb-10">
@@ -103,6 +103,6 @@ export default function ResetPassword() {
           </button>
         </Modal>
       )}
-    </div>
+    </main>
   );
 }

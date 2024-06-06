@@ -74,7 +74,7 @@ export default function FormInscrip() {
     }
   }
   return (
-    <div className="d-flex flex-column center flex-fill">
+    <main className="d-flex flex-column center flex-fill">
       <form onSubmit={handleSubmit(submit)}>
         <div className="d-flex flex-column mb-10">
           <label htmlFor="username" className="mb-10">
@@ -138,7 +138,11 @@ export default function FormInscrip() {
               className="mr-15"
               id="rgpd"
             />
-           J'accepte la collecte et le traitement de mes données personnelles conformément à la <Link to="/politiquedeconfidentialité">politique de confidentialité</Link>
+            J'accepte la collecte et le traitement de mes données personnelles
+            conformément à la{" "}
+            <Link to="/politiquedeconfidentialité">
+              politique de confidentialité
+            </Link>
           </label>
           {errors.rgpd && <p className="text-error">{errors.rgpd.message}</p>}
         </div>
@@ -154,6 +158,6 @@ export default function FormInscrip() {
           </button>
         </Modal>
       )}
-    </div>
+    </main>
   );
 }
