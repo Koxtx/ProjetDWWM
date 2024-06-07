@@ -25,7 +25,7 @@ export default function OneExercices({ e }) {
         onClick={() => toggleLiked(e._id)}
         className="btn btn-reverse-primary"
       >
-        Ajouter à votre séance
+        {e.liked ? "Retirer de vos favoris" : "Ajouter à vos favoris"}
       </button>
     </div>
   );

@@ -7,7 +7,8 @@
     "proteinContent": "20g",
     "calories": "300",
     "imageLink": "https://exemple.com/omelette_aux_legumes.jpg",
-    "preparation": "Faites cuire les légumes dans une poêle, battez les œufs et versez-les sur les légumes. Servez avec des tranches d'avocat."
+    "preparation": "Faites cuire les légumes dans une poêle, battez les œufs et versez-les sur les légumes. Servez avec des tranches d'avocat.",
+    "liked": "false"
   },
   {
     "id": "2",
@@ -23,7 +24,8 @@
     "proteinContent": "25g",
     "calories": "350",
     "imageLink": "https://exemple.com/smoothie_proteine_aux_fruits.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un mixeur jusqu'à consistance lisse."
+    "preparation": "Mélangez tous les ingrédients dans un mixeur jusqu'à consistance lisse.",
+    "liked": "false"
   },
   {
     "id": "3",
@@ -39,7 +41,8 @@
     "proteinContent": "15g",
     "calories": "400",
     "imageLink": "https://exemple.com/flocons_davoine_aux_amandes.jpg",
-    "preparation": "Faites cuire les flocons d'avoine dans le lait d'amande, ajoutez les amandes, les raisins secs et un filet de miel."
+    "preparation": "Faites cuire les flocons d'avoine dans le lait d'amande, ajoutez les amandes, les raisins secs et un filet de miel.",
+    "liked": "false"
   },
   {
     "id": "4",
@@ -55,7 +58,8 @@
     "proteinContent": "18g",
     "calories": "250",
     "imageLink": "https://exemple.com/yaourt_grec_avec_graines_de_chia.jpg",
-    "preparation": "Mélangez le yaourt grec avec les graines de chia, ajoutez les fruits frais et un peu de miel."
+    "preparation": "Mélangez le yaourt grec avec les graines de chia, ajoutez les fruits frais et un peu de miel.",
+    "liked": "false"
   },
   {
     "id": "5",
@@ -65,7 +69,8 @@
     "proteinContent": "12g",
     "calories": "320",
     "imageLink": "https://exemple.com/pain_complet_grille_avec_beurre_damande.jpg",
-    "preparation": "Faites griller le pain, tartinez-le avec du beurre d'amande et ajoutez des tranches de banane."
+    "preparation": "Faites griller le pain, tartinez-le avec du beurre d'amande et ajoutez des tranches de banane.",
+    "liked": "false"
   },
   {
     "id": "6",
@@ -75,7 +80,8 @@
     "proteinContent": "22g",
     "calories": "380",
     "imageLink": "https://exemple.com/crepes_proteinees_a_la_banane.jpg",
-    "preparation": "Mélangez les œufs, la protéine en poudre et la banane écrasée, faites cuire comme des crêpes."
+    "preparation": "Mélangez les œufs, la protéine en poudre et la banane écrasée, faites cuire comme des crêpes.",
+    "liked": "false"
   },
   {
     "id": "7",
@@ -92,7 +98,8 @@
     "proteinContent": "16g",
     "calories": "300",
     "imageLink": "https://exemple.com/muesli_maison_avec_yaourt_et_fruits.jpg",
-    "preparation": "Mélangez les flocons d'avoine, les amandes, les noix et les graines de citrouille, servez avec du yaourt et des fruits frais."
+    "preparation": "Mélangez les flocons d'avoine, les amandes, les noix et les graines de citrouille, servez avec du yaourt et des fruits frais.",
+    "liked": "false"
   },
   {
     "id": "8",
@@ -108,7 +115,8 @@
     "proteinContent": "20g",
     "calories": "320",
     "imageLink": "https://exemple.com/smoothie_bowl_a_la_mangue_et_a_la_noix_de_coco.jpg",
-    "preparation": "Mixez la mangue avec le lait de coco, versez dans un bol et ajoutez les flocons de noix de coco, les graines de lin et les amandes."
+    "preparation": "Mixez la mangue avec le lait de coco, versez dans un bol et ajoutez les flocons de noix de coco, les graines de lin et les amandes.",
+    "liked": "false"
   },
   {
     "id": "9",
@@ -124,7 +132,8 @@
     "proteinContent": "19g",
     "calories": "380",
     "imageLink": "https://exemple.com/tartines_davocat_et_saumon_fume.jpg",
-    "preparation": "Écrasez l'avocat sur les tranches de pain, ajoutez des tranches de saumon fumé, arrosez de jus de citron et saupoudrez de poivre."
+    "preparation": "Écrasez l'avocat sur les tranches de pain, ajoutez des tranches de saumon fumé, arrosez de jus de citron et saupoudrez de poivre.",
+    "liked": "false"
   },
   {
     "id": "10",
@@ -139,7 +148,8 @@
     "proteinContent": "18g",
     "calories": "350",
     "imageLink": "https://exemple.com/pancakes_a_la_patate_douce.jpg",
-    "preparation": "Mélangez la patate douce avec les œufs et la cannelle, faites cuire comme des pancakes, servez avec un filet de miel."
+    "preparation": "Mélangez la patate douce avec les œufs et la cannelle, faites cuire comme des pancakes, servez avec un filet de miel.",
+    "liked": "false"
   },
 
   {
@@ -158,7 +168,8 @@
     "proteinContent": "15g",
     "calories": "400",
     "imageLink": "https://exemple.com/salade_de_quinoa_aux_legumes_grilles.jpg",
-    "preparation": "Faites cuire le quinoa selon les instructions, faites griller les légumes, mélangez-les avec le quinoa, ajoutez la feta émiettée et la vinaigrette."
+    "preparation": "Faites cuire le quinoa selon les instructions, faites griller les légumes, mélangez-les avec le quinoa, ajoutez la feta émiettée et la vinaigrette.",
+    "liked": "false"
   },
   {
     "id": "12",
@@ -176,7 +187,8 @@
     "proteinContent": "30g",
     "calories": "450",
     "imageLink": "https://exemple.com/poulet_grille_avec_riz_complet_et_legumes_sautes.jpg",
-    "preparation": "Faites cuire le riz complet, faites griller le poulet, sautez les légumes dans de l'huile d'olive avec de l'ail, servez ensemble."
+    "preparation": "Faites cuire le riz complet, faites griller le poulet, sautez les légumes dans de l'huile d'olive avec de l'ail, servez ensemble.",
+    "liked": "false"
   },
   {
     "id": "13",
@@ -194,7 +206,8 @@
     "proteinContent": "18g",
     "calories": "380",
     "imageLink": "https://exemple.com/pates_au_pesto_de_basilic_et_tomates_cerises.jpg",
-    "preparation": "Faites cuire les pâtes selon les instructions, mixez le basilic, l'ail, les noix de cajou et le parmesan pour faire le pesto, mélangez avec les pâtes cuites et les tomates cerises."
+    "preparation": "Faites cuire les pâtes selon les instructions, mixez le basilic, l'ail, les noix de cajou et le parmesan pour faire le pesto, mélangez avec les pâtes cuites et les tomates cerises.",
+    "liked": "false"
   },
   {
     "id": "14",
@@ -211,7 +224,8 @@
     "proteinContent": "25g",
     "calories": "350",
     "imageLink": "https://exemple.com/tacos_aux_crevettes.jpg",
-    "preparation": "Faites cuire les crevettes dans une poêle, chauffez les tortillas, garnissez-les avec les crevettes cuites, de l'avocat en tranches, du chou rouge et de la coriandre, arrosez de sauce piquante."
+    "preparation": "Faites cuire les crevettes dans une poêle, chauffez les tortillas, garnissez-les avec les crevettes cuites, de l'avocat en tranches, du chou rouge et de la coriandre, arrosez de sauce piquante.",
+    "liked": "false"
   },
   {
     "id": "15",
@@ -229,7 +243,8 @@
     "proteinContent": "20g",
     "calories": "380",
     "imageLink": "https://exemple.com/bowl_de_tofu_saute_et_legumes.jpg",
-    "preparation": "Coupez le tofu en dés et faites-le sauter dans une poêle avec de l'huile de sésame et de la sauce soja, servez sur du quinoa cuit avec des légumes sautés."
+    "preparation": "Coupez le tofu en dés et faites-le sauter dans une poêle avec de l'huile de sésame et de la sauce soja, servez sur du quinoa cuit avec des légumes sautés.",
+    "liked": "false"
   },
   {
     "id": "16",
@@ -246,7 +261,8 @@
     "proteinContent": "25g",
     "calories": "320",
     "imageLink": "https://exemple.com/salade_de_poulet_cesar.jpg",
-    "preparation": "Faites griller le poulet, mélangez-le avec la laitue, les tomates cerises, les croûtons et le parmesan, assaisonnez avec la sauce césar."
+    "preparation": "Faites griller le poulet, mélangez-le avec la laitue, les tomates cerises, les croûtons et le parmesan, assaisonnez avec la sauce césar.",
+    "liked": "false"
   },
   {
     "id": "17",
@@ -264,7 +280,8 @@
     "proteinContent": "28g",
     "calories": "420",
     "imageLink": "https://exemple.com/poke_bowl_au_saumon.jpg",
-    "preparation": "Coupez le saumon en dés, faites cuire le riz, mélangez-le avec le saumon, l'avocat, le concombre et les carottes râpées, assaisonnez avec de la sauce soja."
+    "preparation": "Coupez le saumon en dés, faites cuire le riz, mélangez-le avec le saumon, l'avocat, le concombre et les carottes râpées, assaisonnez avec de la sauce soja.",
+    "liked": "false"
   },
   {
     "id": "18",
@@ -283,7 +300,8 @@
     "proteinContent": "22g",
     "calories": "380",
     "imageLink": "https://exemple.com/burger_vegetarien_aux_haricots_noirs.jpg",
-    "preparation": "Écrasez les haricots noirs avec des flocons d'avoine et des épices à burger, formez des galettes et faites-les cuire, assemblez les burgers avec des légumes et du pain."
+    "preparation": "Écrasez les haricots noirs avec des flocons d'avoine et des épices à burger, formez des galettes et faites-les cuire, assemblez les burgers avec des légumes et du pain.",
+    "liked": "false"
   },
   {
     "id": "19",
@@ -301,7 +319,8 @@
     "proteinContent": "14g",
     "calories": "350",
     "imageLink": "https://exemple.com/risotto_aux_champignons.jpg",
-    "preparation": "Faites revenir l'oignon et l'ail, ajoutez le riz et le vin blanc, puis le bouillon de légumes petit à petit jusqu'à ce que le riz soit cuit, incorporez les champignons et le parmesan."
+    "preparation": "Faites revenir l'oignon et l'ail, ajoutez le riz et le vin blanc, puis le bouillon de légumes petit à petit jusqu'à ce que le riz soit cuit, incorporez les champignons et le parmesan.",
+    "liked": "false"
   },
   {
     "id": "20",
@@ -319,7 +338,8 @@
     "proteinContent": "20g",
     "calories": "320",
     "imageLink": "https://exemple.com/wrap_aux_crevettes_et_guacamole.jpg",
-    "preparation": "Faites cuire les crevettes dans une poêle, écrasez l'avocat pour faire du guacamole, garnissez les tortillas avec les crevettes, le guacamole et les légumes."
+    "preparation": "Faites cuire les crevettes dans une poêle, écrasez l'avocat pour faire du guacamole, garnissez les tortillas avec les crevettes, le guacamole et les légumes.",
+    "liked": "false"
   },
 
   {
@@ -335,7 +355,8 @@
     "proteinContent": "20g",
     "calories": "300",
     "imageLink": "https://exemple.com/smoothie_proteine_a_la_banane_et_aux_amandes.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un mixeur jusqu'à consistance lisse."
+    "preparation": "Mélangez tous les ingrédients dans un mixeur jusqu'à consistance lisse.",
+    "liked": "false"
   },
   {
     "id": "22",
@@ -351,7 +372,8 @@
     "proteinContent": "15g",
     "calories": "250",
     "imageLink": "https://exemple.com/yaourt_grec_avec_fruits_rouges_et_granola.jpg",
-    "preparation": "Mélangez le yaourt grec avec les fruits rouges et saupoudrez de granola."
+    "preparation": "Mélangez le yaourt grec avec les fruits rouges et saupoudrez de granola.",
+    "liked": "false"
   },
   {
     "id": "23",
@@ -367,7 +389,8 @@
     "proteinContent": "18g",
     "calories": "280",
     "imageLink": "https://exemple.com/barres_proteinees_maison.jpg",
-    "preparation": "Mélangez tous les ingrédients, étalez le mélange dans un plat, laissez refroidir au réfrigérateur, puis coupez en barres."
+    "preparation": "Mélangez tous les ingrédients, étalez le mélange dans un plat, laissez refroidir au réfrigérateur, puis coupez en barres.",
+    "liked": "false"
   },
   {
     "id": "24",
@@ -385,7 +408,8 @@
     "proteinContent": "10g",
     "calories": "200",
     "imageLink": "https://exemple.com/hummus_et_legumes_croquants.jpg",
-    "preparation": "Mixez les pois chiches avec l'huile d'olive, l'ail et le jus de citron jusqu'à obtenir une consistance lisse, servez avec des bâtonnets de légumes."
+    "preparation": "Mixez les pois chiches avec l'huile d'olive, l'ail et le jus de citron jusqu'à obtenir une consistance lisse, servez avec des bâtonnets de légumes.",
+    "liked": "false"
   },
   {
     "id": "25",
@@ -395,7 +419,8 @@
     "proteinContent": "20g",
     "calories": "220",
     "imageLink": "https://exemple.com/cottage_cheese_avec_ananas_et_graines_de_chia.jpg",
-    "preparation": "Mélangez le cottage cheese avec l'ananas coupé en dés, les graines de chia et un filet de miel."
+    "preparation": "Mélangez le cottage cheese avec l'ananas coupé en dés, les graines de chia et un filet de miel.",
+    "liked": "false"
   },
   {
     "id": "26",
@@ -405,7 +430,8 @@
     "proteinContent": "15g",
     "calories": "280",
     "imageLink": "https://exemple.com/pudding_de_chia_a_la_mangue.jpg",
-    "preparation": "Mélangez les graines de chia avec le lait de coco et le miel, laissez reposer au réfrigérateur pendant au moins 2 heures, puis ajoutez les dés de mangue."
+    "preparation": "Mélangez les graines de chia avec le lait de coco et le miel, laissez reposer au réfrigérateur pendant au moins 2 heures, puis ajoutez les dés de mangue.",
+    "liked": "false"
   },
   {
     "id": "27",
@@ -423,7 +449,8 @@
     "proteinContent": "12g",
     "calories": "220",
     "imageLink": "https://exemple.com/oeufs_durs_avec_guacamole.jpg",
-    "preparation": "Faites cuire les œufs, écrasez l'avocat pour faire du guacamole, ajoutez les tomates, l'oignon, le jus de citron, le sel et le poivre."
+    "preparation": "Faites cuire les œufs, écrasez l'avocat pour faire du guacamole, ajoutez les tomates, l'oignon, le jus de citron, le sel et le poivre.",
+    "liked": "false"
   },
   {
     "id": "28",
@@ -438,7 +465,8 @@
     "proteinContent": "12g",
     "calories": "180",
     "imageLink": "https://exemple.com/smoothie_aux_baies_et_a_la_menthe.jpg",
-    "preparation": "Mixez les baies avec la menthe, le yaourt grec et le miel jusqu'à consistance lisse."
+    "preparation": "Mixez les baies avec la menthe, le yaourt grec et le miel jusqu'à consistance lisse.",
+    "liked": "false"
   },
   {
     "id": "29",
@@ -455,7 +483,8 @@
     "proteinContent": "10g",
     "calories": "220",
     "imageLink": "https://exemple.com/muffins_a_la_banane_et_aux_noix.jpg",
-    "preparation": "Écrasez les bananes, mélangez avec les œufs, la farine d'amande, la poudre à lever, le miel et les noix concassées, versez dans des moules à muffins et faites cuire."
+    "preparation": "Écrasez les bananes, mélangez avec les œufs, la farine d'amande, la poudre à lever, le miel et les noix concassées, versez dans des moules à muffins et faites cuire.",
+    "liked": "false"
   },
   {
     "id": "30",
@@ -469,7 +498,8 @@
     "proteinContent": "8g",
     "calories": "150",
     "imageLink": "https://exemple.com/poireaux_vinaigrette.jpg",
-    "preparation": "Faites cuire les poireaux à la vapeur jusqu'à ce qu'ils soient tendres, servez avec la vinaigrette à la moutarde et un filet de jus de citron."
+    "preparation": "Faites cuire les poireaux à la vapeur jusqu'à ce qu'ils soient tendres, servez avec la vinaigrette à la moutarde et un filet de jus de citron.",
+    "liked": "false"
   },
 
   {
@@ -488,7 +518,8 @@
     "proteinContent": "25g",
     "calories": "400",
     "imageLink": "https://exemple.com/saumon_roti_avec_legumes_rotis.jpg",
-    "preparation": "Assaisonnez le saumon avec des herbes de Provence, faites-le rôtir au four avec les légumes coupés en morceaux et arrosés d'huile d'olive."
+    "preparation": "Assaisonnez le saumon avec des herbes de Provence, faites-le rôtir au four avec les légumes coupés en morceaux et arrosés d'huile d'olive.",
+    "liked": "false"
   },
   {
     "id": "32",
@@ -505,7 +536,8 @@
     "proteinContent": "30g",
     "calories": "450",
     "imageLink": "https://exemple.com/salade_de_poulet_grille_et_quinoa.jpg",
-    "preparation": "Faites griller le poulet, faites cuire le quinoa selon les instructions, mélangez avec les épinards, les tomates, l'avocat et la vinaigrette."
+    "preparation": "Faites griller le poulet, faites cuire le quinoa selon les instructions, mélangez avec les épinards, les tomates, l'avocat et la vinaigrette.",
+    "liked": "false"
   },
   {
     "id": "33",
@@ -524,7 +556,8 @@
     "proteinContent": "20g",
     "calories": "380",
     "imageLink": "https://exemple.com/tacos_vegetariens_aux_haricots_noirs.jpg",
-    "preparation": "Réchauffez les tortillas, garnissez-les avec les haricots noirs, le maïs, les poivrons, l'oignon, l'avocat et la coriandre, arrosez de sauce piquante."
+    "preparation": "Réchauffez les tortillas, garnissez-les avec les haricots noirs, le maïs, les poivrons, l'oignon, l'avocat et la coriandre, arrosez de sauce piquante.",
+    "liked": "false"
   },
   {
     "id": "34",
@@ -542,7 +575,8 @@
     "proteinContent": "20g",
     "calories": "400",
     "imageLink": "https://exemple.com/pates_a_la_carbonara.jpg",
-    "preparation": "Faites cuire les spaghettis selon les instructions, faites revenir les lardons dans une poêle, mélangez les œufs avec le parmesan, la crème fraîche, l'ail et le persil, ajoutez aux pâtes chaudes et mélangez."
+    "preparation": "Faites cuire les spaghettis selon les instructions, faites revenir les lardons dans une poêle, mélangez les œufs avec le parmesan, la crème fraîche, l'ail et le persil, ajoutez aux pâtes chaudes et mélangez.",
+    "liked": "false"
   },
   {
     "id": "35",
@@ -561,7 +595,8 @@
     "proteinContent": "18g",
     "calories": "350",
     "imageLink": "https://exemple.com/curry_de_pois_chiches.jpg",
-    "preparation": "Faites revenir l'oignon, l'ail et le gingembre dans une casserole, ajoutez les pois chiches, les tomates concassées, le curry en poudre et le lait de coco, laissez mijoter jusqu'à ce que les pois chiches soient tendres, ajoutez les épinards et laissez cuire encore quelques minutes."
+    "preparation": "Faites revenir l'oignon, l'ail et le gingembre dans une casserole, ajoutez les pois chiches, les tomates concassées, le curry en poudre et le lait de coco, laissez mijoter jusqu'à ce que les pois chiches soient tendres, ajoutez les épinards et laissez cuire encore quelques minutes.",
+    "liked": "false"
   },
   {
     "id": "36",
@@ -580,7 +615,8 @@
     "proteinContent": "15g",
     "calories": "380",
     "imageLink": "https://exemple.com/pizza_aux_legumes_grilles.jpg",
-    "preparation": "Étalez la sauce tomate sur la pâte à pizza, garnissez avec les légumes grillés et la mozzarella, faites cuire au four jusqu'à ce que la croûte soit dorée, garnissez de basilic frais avant de servir."
+    "preparation": "Étalez la sauce tomate sur la pâte à pizza, garnissez avec les légumes grillés et la mozzarella, faites cuire au four jusqu'à ce que la croûte soit dorée, garnissez de basilic frais avant de servir.",
+    "liked": "false"
   },
   {
     "id": "37",
@@ -599,7 +635,8 @@
     "proteinContent": "20g",
     "calories": "400",
     "imageLink": "https://exemple.com/couscous_vegetarien_aux_legumes.jpg",
-    "preparation": "Faites cuire le couscous selon les instructions, faites revenir les légumes dans une poêle, mélangez avec le couscous cuit, les pois chiches, les raisins secs et le bouillon de légumes, laissez mijoter jusqu'à ce que les légumes soient tendres."
+    "preparation": "Faites cuire le couscous selon les instructions, faites revenir les légumes dans une poêle, mélangez avec le couscous cuit, les pois chiches, les raisins secs et le bouillon de légumes, laissez mijoter jusqu'à ce que les légumes soient tendres.",
+    "liked": "false"
   },
   {
     "id": "38",
@@ -618,7 +655,8 @@
     "proteinContent": "25g",
     "calories": "420",
     "imageLink": "https://exemple.com/chili_con_carne.jpg",
-    "preparation": "Faites revenir l'oignon, l'ail et le bœuf haché dans une casserole, ajoutez les tomates concassées, les haricots rouges, les poivrons et les épices, laissez mijoter jusqu'à ce que la viande soit cuite et les saveurs bien mélangées."
+    "preparation": "Faites revenir l'oignon, l'ail et le bœuf haché dans une casserole, ajoutez les tomates concassées, les haricots rouges, les poivrons et les épices, laissez mijoter jusqu'à ce que la viande soit cuite et les saveurs bien mélangées.",
+    "liked": "false"
   },
   {
     "id": "39",
@@ -638,7 +676,8 @@
     "proteinContent": "10g",
     "calories": "250",
     "imageLink": "https://exemple.com/ratatouille_provencale.jpg",
-    "preparation": "Faites revenir l'oignon et l'ail dans une casserole, ajoutez les légumes coupés en dés, l'huile d'olive et les herbes, laissez mijoter jusqu'à ce que les légumes soient tendres."
+    "preparation": "Faites revenir l'oignon et l'ail dans une casserole, ajoutez les légumes coupés en dés, l'huile d'olive et les herbes, laissez mijoter jusqu'à ce que les légumes soient tendres.",
+    "liked": "false"
   },
   {
     "id": "40",
@@ -657,7 +696,8 @@
     "proteinContent": "22g",
     "calories": "380",
     "imageLink": "https://exemple.com/pad_thai_aux_crevettes.jpg",
-    "preparation": "Faites cuire les crevettes dans une poêle, faites cuire les nouilles de riz selon les instructions, faites sauter les légumes et les œufs, ajoutez les crevettes cuites et les nouilles, assaisonnez avec la sauce soja et la sauce tamarin, servez garni de cacahuètes concassées."
+    "preparation": "Faites cuire les crevettes dans une poêle, faites cuire les nouilles de riz selon les instructions, faites sauter les légumes et les œufs, ajoutez les crevettes cuites et les nouilles, assaisonnez avec la sauce soja et la sauce tamarin, servez garni de cacahuètes concassées.",
+    "liked": "false"
   },
 
   {
@@ -674,7 +714,8 @@
     "proteinContent": "20g",
     "calories": "300",
     "imageLink": "https://exemple.com/pudding_proteine_a_la_vanille.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un bol, laissez reposer au réfrigérateur pendant au moins 2 heures ou toute la nuit."
+    "preparation": "Mélangez tous les ingrédients dans un bol, laissez reposer au réfrigérateur pendant au moins 2 heures ou toute la nuit.",
+    "liked": "false"
   },
   {
     "id": "42",
@@ -692,7 +733,8 @@
     "proteinContent": "15g",
     "calories": "250",
     "imageLink": "https://exemple.com/barres_energetiques_aux_noix_et_aux_dattes.jpg",
-    "preparation": "Mixez tous les ingrédients dans un mixeur, formez des barres avec le mélange, laissez durcir au réfrigérateur avant de déguster."
+    "preparation": "Mixez tous les ingrédients dans un mixeur, formez des barres avec le mélange, laissez durcir au réfrigérateur avant de déguster.",
+    "liked": "false"
   },
   {
     "id": "43",
@@ -708,7 +750,8 @@
     "proteinContent": "25g",
     "calories": "350",
     "imageLink": "https://exemple.com/mousse_au_chocolat_proteinee.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un bol jusqu'à obtenir une consistance lisse, réfrigérez pendant au moins 1 heure avant de servir."
+    "preparation": "Mélangez tous les ingrédients dans un bol jusqu'à obtenir une consistance lisse, réfrigérez pendant au moins 1 heure avant de servir.",
+    "liked": "false"
   },
   {
     "id": "44",
@@ -724,7 +767,8 @@
     "proteinContent": "20g",
     "calories": "300",
     "imageLink": "https://exemple.com/pancakes_proteines_aux_myrtilles.jpg",
-    "preparation": "Mixez les flocons d'avoine dans un mixeur pour en faire de la farine, mélangez avec la protéine en poudre, les œufs et la banane, faites cuire des pancakes dans une poêle antiadhésive, garnissez de myrtilles avant de servir."
+    "preparation": "Mixez les flocons d'avoine dans un mixeur pour en faire de la farine, mélangez avec la protéine en poudre, les œufs et la banane, faites cuire des pancakes dans une poêle antiadhésive, garnissez de myrtilles avant de servir.",
+    "liked": "false"
   },
   {
     "id": "45",
@@ -740,7 +784,8 @@
     "proteinContent": "18g",
     "calories": "320",
     "imageLink": "https://exemple.com/tartelette_aux_fruits_rouges_et_a_la_creme_vanille.jpg",
-    "preparation": "Étalez la pâte sablée dans des moules à tartelettes, faites cuire au four jusqu'à ce que la croûte soit dorée, mélangez le yaourt grec avec la protéine en poudre et le miel, garnissez les tartelettes avec ce mélange et les fruits rouges."
+    "preparation": "Étalez la pâte sablée dans des moules à tartelettes, faites cuire au four jusqu'à ce que la croûte soit dorée, mélangez le yaourt grec avec la protéine en poudre et le miel, garnissez les tartelettes avec ce mélange et les fruits rouges.",
+    "liked": "false"
   },
   {
     "id": "46",
@@ -757,7 +802,8 @@
     "proteinContent": "22g",
     "calories": "350",
     "imageLink": "https://exemple.com/crepes_proteinees_a_la_banane_et_au_chocolat.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un bol jusqu'à obtenir une pâte lisse, faites cuire des crêpes dans une poêle antiadhésive, garnissez de pépites de chocolat noir avant de servir."
+    "preparation": "Mélangez tous les ingrédients dans un bol jusqu'à obtenir une pâte lisse, faites cuire des crêpes dans une poêle antiadhésive, garnissez de pépites de chocolat noir avant de servir.",
+    "liked": "false"
   },
   {
     "id": "47",
@@ -773,7 +819,8 @@
     "proteinContent": "30g",
     "calories": "400",
     "imageLink": "https://exemple.com/gateau_au_fromage_proteine_aux_fruits_rouges.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un bol, versez dans un moule à gâteau, faites cuire au four jusqu'à ce que le gâteau soit pris, garnissez de fruits rouges avant de servir."
+    "preparation": "Mélangez tous les ingrédients dans un bol, versez dans un moule à gâteau, faites cuire au four jusqu'à ce que le gâteau soit pris, garnissez de fruits rouges avant de servir.",
+    "liked": "false"
   },
   {
     "id": "48",
@@ -790,7 +837,8 @@
     "proteinContent": "18g",
     "calories": "300",
     "imageLink": "https://exemple.com/brownies_proteines_aux_noix.jpg",
-    "preparation": "Mélangez tous les ingrédients dans un bol, versez dans un moule à brownie, faites cuire au four jusqu'à ce que le brownie soit cuit, laissez refroidir avant de couper en morceaux."
+    "preparation": "Mélangez tous les ingrédients dans un bol, versez dans un moule à brownie, faites cuire au four jusqu'à ce que le brownie soit cuit, laissez refroidir avant de couper en morceaux.",
+    "liked": "false"
   },
   {
     "id": "49",
@@ -806,7 +854,8 @@
     "proteinContent": "25g",
     "calories": "350",
     "imageLink": "https://exemple.com/tiramisu_proteine_aux_fraises.jpg",
-    "preparation": "Trempez les biscuits à la cuillère dans le café fort, disposez-les dans un plat, mélangez le fromage blanc avec la protéine en poudre, versez sur les biscuits, garnissez de fraises tranchées, réfrigérez pendant au moins 2 heures avant de servir."
+    "preparation": "Trempez les biscuits à la cuillère dans le café fort, disposez-les dans un plat, mélangez le fromage blanc avec la protéine en poudre, versez sur les biscuits, garnissez de fraises tranchées, réfrigérez pendant au moins 2 heures avant de servir.",
+    "liked": "false"
   },
   {
     "id": "50",
@@ -822,6 +871,7 @@
     "proteinContent": "20g",
     "calories": "300",
     "imageLink": "https://exemple.com/smoothie_bowl_a_la_mangue_et_a_la_noix_de_coco.jpg",
-    "preparation": "Mixez la mangue, le yaourt grec, le lait de coco et la protéine en poudre dans un blender jusqu'à consistance lisse, versez dans un bol, garnissez de noix de coco râpée."
+    "preparation": "Mixez la mangue, le yaourt grec, le lait de coco et la protéine en poudre dans un blender jusqu'à consistance lisse, versez dans un bol, garnissez de noix de coco râpée.",
+    "liked": "false"
   }
 ]

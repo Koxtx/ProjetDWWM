@@ -1,7 +1,7 @@
 import React from "react";
 import oeufs from "../../image/oeufs.jpg";
 import styles from "./Alimentation.module.scss";
-import Exemple from "../../compenants/Exemple/Exemple";
+import { NavLink } from "react-router-dom";
 
 export default function Alimentation() {
   return (
@@ -25,7 +25,18 @@ export default function Alimentation() {
         </p>
       </section>
       <section>
-        <Exemple titre="Recettes" />
+        <div>
+          <ul>
+            <NavLink end to="/Recettes">
+              tous
+            </NavLink>
+            <NavLink to="/Recettes/Petit-déjeuner">Petit-déjeuner</NavLink>
+            <NavLink to="/Recettes/Déjeuner">Déjeuner</NavLink>
+            <NavLink to="/Recettes/Collation">Collation</NavLink>
+            <NavLink to="/Recettes/Dîner">Dîner</NavLink>
+            <NavLink to="/Recettes/Dessert">Dessert</NavLink>
+          </ul>
+        </div>
       </section>
     </main>
   );

@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./OneRecette.module.scss";
+import { useOutletContext } from "react-router-dom";
 
 export default function OneRecette({ r }) {
+  const { toggleLiked } = useOutletContext();
   return (
     <div className={`card p-20 d-flex flex-column ${styles.recetteCard}`}>
       <p className={`${styles.recette}`}>
@@ -36,7 +38,9 @@ export default function OneRecette({ r }) {
       <div className="d-flex justify-content-center align-items-center flex-fill">
         <img className={styles.logo} src={r.imageLink} alt={r.name} />
       </div>
-      <button className="btn btn-primary">Ajouter à vos favoris</button>
+      <button onClick={() => toggleLiked(r._id)} className="btn btn-primary">
+        {r.liked ? "Retirer de vos favoris" : "Ajouter à vos favoris"}
+      </button>
     </div>
   );
 }

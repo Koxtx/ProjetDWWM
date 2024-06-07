@@ -48,6 +48,7 @@ export default function Connexion() {
       const response = await signin(values);
       // console.log(response);
       if (!response.message) {
+        localStorage.setItem("user", JSON.stringify(response));
         setConnectedUser(response.user);
         setFeedback("Connexion réussie");
         reset(defaultValues);

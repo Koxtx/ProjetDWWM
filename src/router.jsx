@@ -16,6 +16,7 @@ import ForgetPassword from "./pages/Password/ForgetPassword";
 import ResetPassword from "./pages/Password/ResetPassword";
 import MentionLegal from "./pages/mentionLegal/MentionLegal";
 import PolitiqueConfidentialite from "./pages/PolitiqueCofidentialité/PolitiqueConfidentialite";
+import Favorites from "./pages/Favorites/Favorites";
 
 export const router = createBrowserRouter([
   {
@@ -62,10 +63,22 @@ export const router = createBrowserRouter([
       {
         path: "/Exercices",
         element: <ExExos />,
+        children: [
+          {
+            path: ":bodyPart",
+            element: <ExExos />,
+          },
+        ],
       },
       {
         path: "/Recettes",
         element: <ExRecette />,
+        children: [
+          {
+            path: ":mealType",
+            element: <ExRecette />,
+          },
+        ],
       },
       {
         path: "/forgetpassword",
@@ -106,6 +119,14 @@ export const router = createBrowserRouter([
       {
         path: "/politiquedeconfidentialité",
         element: <PolitiqueConfidentialite />,
+      },
+      {
+        path: "/favorites",
+        element: (
+          <UserConnected>
+            <Favorites />
+          </UserConnected>
+        ),
       },
     ],
   },

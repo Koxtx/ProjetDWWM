@@ -6,7 +6,7 @@ import { UserContext } from "../../context/UserContext";
 
 export default function Header() {
   const { user } = useContext(UserContext);
-  console.log(user);
+  // console.log(user);
   return (
     <header className="d-flex flex-row justify-content-center align-items-center  ">
       <div
@@ -27,6 +27,9 @@ export default function Header() {
               </NavLink>
               <NavLink className="btn mr-60 " to="/Alimentation">
                 Alimentation
+              </NavLink>
+              <NavLink className="btn mr-60 " to="/favorites">
+                Favorites
               </NavLink>
             </>
           ) : null}

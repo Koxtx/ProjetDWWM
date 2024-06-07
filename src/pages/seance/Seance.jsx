@@ -1,7 +1,7 @@
 import React from "react";
 import souleveTerre from "../../image/souleveTerre.jpg";
 import styles from "./Seance.module.scss";
-import Exemple from "../../compenants/Exemple/Exemple";
+import { NavLink } from "react-router-dom";
 
 export default function Seance() {
   return (
@@ -29,7 +29,19 @@ export default function Seance() {
         </p>
       </section>
       <section>
-        <Exemple titre="Exercices" />
+        <div>
+          <ul>
+            <NavLink end to="/Exercices">
+              tous
+            </NavLink>
+            <NavLink to="/Exercices/Dos">Dos</NavLink>
+            <NavLink to="/Exercices/Pectoraux">Pectauraux</NavLink>
+            <NavLink to="/Exercices/Épaules">Épaules</NavLink>
+            <NavLink to="/Exercices/Bras">Bras</NavLink>
+            <NavLink to="/Exercices/Jambes">Jambes</NavLink>
+            <NavLink to="/Exercices/Abdos">Abdos</NavLink>
+          </ul>
+        </div>
       </section>
     </main>
   );

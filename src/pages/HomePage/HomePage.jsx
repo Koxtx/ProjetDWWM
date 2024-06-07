@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./HomePage.module.scss";
 import WomanHaltero from "../../image/woman-haltero.jpg";
-import Exemple from "../../compenants/Exemple/Exemple";
+
+import { NavLink } from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -44,8 +45,31 @@ export default function HomePage() {
         </p>
       </section>
 
-      <Exemple titre="Exercices" />
-      <Exemple titre="Recettes" />
+      <div>
+        <ul>
+          <NavLink end to="/Exercices">
+            tous
+          </NavLink>
+          <NavLink to="/Exercices/Dos">Dos</NavLink>
+          <NavLink to="/Exercices/Pectoraux">Pectauraux</NavLink>
+          <NavLink to="/Exercices/Épaules">Épaules</NavLink>
+          <NavLink to="/Exercices/Bras">Bras</NavLink>
+          <NavLink to="/Exercices/Jambes">Jambes</NavLink>
+          <NavLink to="/Exercices/Abdos">Abdos</NavLink>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <NavLink end to="/Recettes">
+            tous
+          </NavLink>
+          <NavLink to="/Recettes/Petit-déjeuner">Petit-déjeuner</NavLink>
+          <NavLink to="/Recettes/Déjeuner">Déjeuner</NavLink>
+          <NavLink to="/Recettes/Collation">Collation</NavLink>
+          <NavLink to="/Recettes/Dîner">Dîner</NavLink>
+          <NavLink to="/Recettes/Dessert">Dessert</NavLink>
+        </ul>
+      </div>
     </main>
   );
 }
