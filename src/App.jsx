@@ -43,6 +43,9 @@ function App() {
     setExercices(
       exercices.map((e) => (e._id === i ? { ...e, liked: !e.liked } : e))
     );
+    setRecettes(
+      recettes.map((r) => (r._id === i ? { ...r, liked: !r.liked } : r))
+    );
   }
 
   return (
