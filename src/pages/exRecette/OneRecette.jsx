@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./OneRecette.module.scss";
 import { useOutletContext } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
 
 export default function OneRecette({ r }) {
+  const { user } = useContext(UserContext);
   const { toggleLiked } = useOutletContext();
   return (
     <div className={`card p-20 d-flex flex-column ${styles.recetteCard}`}>
@@ -38,9 +40,11 @@ export default function OneRecette({ r }) {
       <div className="d-flex justify-content-center align-items-center flex-fill">
         <img className={styles.logo} src={r.imageLink} alt={r.name} />
       </div>
-      <button onClick={() => toggleLiked(r._id)} className="btn btn-primary">
-        {r.liked ? "Retirer de vos favoris" : "Ajouter à vos favoris"}
-      </button>
+      {user ? (
+        <button onClick={() => toggleLiked(r._id)} className="btn btn-primary">
+          {r.liked ? "Retirer de vos favoris" : "Ajouter à vos favoris"}
+        </button>
+      ) : null}
     </div>
   );
 }

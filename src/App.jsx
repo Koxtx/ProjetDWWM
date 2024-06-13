@@ -4,6 +4,8 @@ import styles from "./App.module.scss";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { useState, useEffect } from "react";
 import UserProvider from "./compenants/Providers/UserProvider";
+import SeanceProvider from "./compenants/Providers/SeanceProvider";
+import PrProvider from "./compenants/Providers/PrProvider";
 
 function App() {
   const [exercices, setExercices] = useState([]);
@@ -54,10 +56,14 @@ function App() {
      ${styles.main}`}
     >
       <UserProvider>
-        <Header />
-        <Outlet context={{ exercices, toggleLiked, recettes }} />
-        <Footer />
-        <ScrollRestoration />
+        <SeanceProvider>
+          <PrProvider>
+            <Header />
+            <Outlet context={{ exercices, toggleLiked, recettes }} />
+            <Footer />
+            <ScrollRestoration />
+          </PrProvider>
+        </SeanceProvider>
       </UserProvider>
     </div>
   );
