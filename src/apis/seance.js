@@ -27,13 +27,14 @@ export async function createSeance(seance) {
 }
 
 export async function updateSeance(id, seance) {
+  console.log(id, seance);
   try {
     const response = await fetch(`${BASE_URL}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(id, seance),
+      body: JSON.stringify({ id, seance }),
     });
     const updatedSeance = await response.json();
     return updatedSeance;
@@ -44,8 +45,12 @@ export async function updateSeance(id, seance) {
 
 export async function deleteSeance(id) {
   try {
-    await fetch(`${BASE_URL}/:_id`, {
+    await fetch(`${BASE_URL}/`, {
       method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id }),
     });
   } catch (error) {
     console.error(error);

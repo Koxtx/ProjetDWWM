@@ -18,6 +18,7 @@ export default function Seance() {
         <h2 className="mt-30 ml-10"> Seance :</h2>
       </section>
       <SeanceList />
+
       <section>
         <div>
           <ul>
