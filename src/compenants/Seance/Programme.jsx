@@ -1,12 +1,9 @@
 import React from "react";
-import SeanceForm from "./SeanceForm";
 
 export default function Programme({
   seances,
   onSelectSeance,
   handleEdit,
-  editSeance,
-  setEditSeance,
   handleDelete,
 }) {
   const days = [
@@ -18,7 +15,6 @@ export default function Programme({
     "Samedi",
     "Dimanche",
   ];
-  console.log(seances);
 
   return (
     <div className="programme d-flex flex-row">
@@ -34,9 +30,22 @@ export default function Programme({
                 <ul>
                   {seance.exercises.map((exercise) => (
                     <li key={exercise._id}>
-                      <p>Nom de l'exercice : {exercise.name}</p>
-                      <p>Nombre de répétitions : {exercise.sets.length}</p>
-                      <p>Temps de repos : {exercise.rest}</p>
+                      <p>Exercice : {exercise.name}</p>
+                      <p>Nombre de séries : {exercise.sets.length}</p>
+                      <p>Temps de repos : {exercise.rest} secondes</p>
+                      <ul>
+                        {exercise.sets.map((set, idx) => (
+                          <li key={idx}>
+                            <p>Nombre de Répétitions : {set.reps}</p>
+                            <p>
+                              Poids utilisé :{" "}
+                              {set.weight === 0
+                                ? "poids de corps"
+                                : `${set.weight} kg`}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
                   ))}
                 </ul>
@@ -48,9 +57,6 @@ export default function Programme({
             ))}
         </div>
       ))}
-      {editSeance && (
-        <SeanceForm editSeance={editSeance} setEditSeance={setEditSeance} />
-      )}
     </div>
   );
 }
