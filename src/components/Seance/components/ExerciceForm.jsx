@@ -59,6 +59,13 @@ export default function ExerciseForm({ exercise = {}, onSave, onDelete }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSave(formState);
+    setFormState({
+      name: "",
+      sets: [],
+      rest: 0,
+      newReps: 0,
+      newWeight: 0,
+    });
   };
 
   return (

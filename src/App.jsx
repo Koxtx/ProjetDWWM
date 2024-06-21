@@ -1,11 +1,11 @@
-import Header from "./compenants/Header/Header";
-import Footer from "./compenants/Footer/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import styles from "./App.module.scss";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { useState, useEffect } from "react";
-import UserProvider from "./compenants/Providers/UserProvider";
-import SeanceProvider from "./compenants/Providers/SeanceProvider";
-import PrProvider from "./compenants/Providers/PrProvider";
+import UserProvider from "./components/Providers/UserProvider";
+import SeanceProvider from "./components/Providers/SeanceProvider";
+import PrProvider from "./components/Providers/PrProvider";
 
 function App() {
   const [exercices, setExercices] = useState([]);

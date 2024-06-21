@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { passwordUsers } from "../../apis/users";
-import Modal from "../../compenants/modal/Modal";
+import Modal from "../../components/modal/Modal";
 
 export default function ForgetPassword() {
   const [feedback, setFeedback] = useState("");

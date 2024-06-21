@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signin } from "../../apis/users";
 import { Link, useNavigate } from "react-router-dom";
-import Modal from "../../compenants/modal/Modal";
+import Modal from "../../components/modal/Modal";
 import { UserContext } from "../../context/UserContext";
 
 export default function Connexion() {

@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import souleveTerre from "../../image/souleveTerre.jpg";
 import styles from "./Seance.module.scss";
 import { NavLink } from "react-router-dom";
-import Programme from "../../compenants/Seance/Programme";
-import DailySeance from "../../compenants/Seance/DailySeance";
+import Programme from "../../components/Seance/Programme";
+import DailySeance from "../../components/Seance/DailySeance";
 import { deleteSeance, getSeancesFromApi } from "../../apis/seance";
 import { SeanceContext } from "../../context/SeanceContext";
-import AddSeance from "../../compenants/Seance/compenents/AddSeance";
-import EditSeance from "../../compenants/Seance/compenents/EditSeance";
+import AddSeance from "../../components/Seance/components/AddSeance";
+import EditSeance from "../../components/Seance/components/EditSeance";
 
 export default function Seance() {
   const { seances, setSeances } = useContext(SeanceContext);
@@ -16,25 +16,39 @@ export default function Seance() {
   const [addingSeance, setAddingSeance] = useState(false);
   console.log(seances);
   useEffect(() => {
-    async function getSeances() {
-      const data = await getSeancesFromApi();
-      setSeances(data);
+    async function fetchSeances() {
+      try {
+        const data = await getSeancesFromApi();
+        setSeances(data);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des séances:", error);
+      }
     }
-    getSeances();
-  }, [setSeances]);
+    fetchSeances();
+  }, []);
 
   const handleEdit = (seance) => {
     setEditSeance(seance);
   };
 
   const handleDelete = async (id) => {
-    await deleteSeance(id);
-    setSeances(seances.filter((seance) => seance._id !== id));
+    try {
+      await deleteSeance(id);
+      setSeances(seances.filter((seance) => seance._id !== id));
+    } catch (error) {
+      console.error("Erreur lors de la suppression de la séance:", error);
+    }
   };
 
   const handleSelectSeance = (seance) => {
     setSelectedSeance(seance);
   };
+
+  const currentDay = new Date().toLocaleString("fr-FR", { weekday: "long" });
+
+  const todaySeance = seances.find(
+    (seance) => seance.day.toLowerCase() === currentDay.toLowerCase()
+  );
 
   return (
     <main className="mhFull">
@@ -67,10 +81,7 @@ export default function Seance() {
         </div>
         <div>
           <h3>Seance du jour:</h3>
-          <DailySeance
-            seance={selectedSeance}
-            onSeanceUpdate={() => setSelectedSeance(null)}
-          />
+          <DailySeance seance={todaySeance} />
         </div>
       </div>
 

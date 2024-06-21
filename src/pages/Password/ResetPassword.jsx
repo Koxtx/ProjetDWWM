@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { resetpassword } from "../../apis/users";
-import Modal from "../../compenants/modal/Modal";
+import Modal from "../../components/modal/Modal";
 
 export default function ResetPassword() {
   const [feedback, setFeedback] = useState("");

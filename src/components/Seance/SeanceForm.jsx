@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { SeanceContext } from "../../context/SeanceContext";
 import { updateSeance, createSeance } from "../../apis/seance";
-import ExerciseForm from "./ExerciseForm";
+import ExerciseForm from "./components/ExerciceForm";
 
 export default function SeanceForm({
   editSeance,
@@ -63,11 +63,21 @@ export default function SeanceForm({
       setSeances([...seances, newSeance]);
       setAddingSeance(false);
     }
+    setFormState({
+      name: "",
+      exercises: [],
+      day: "",
+    });
   };
 
   const handleCancel = () => {
     setEditSeance(null);
     setAddingSeance(false);
+    setFormState({
+      name: "",
+      exercises: [],
+      day: "",
+    });
   };
 
   return (
