@@ -3,7 +3,6 @@ import souleveTerre from "../../image/souleveTerre.jpg";
 import styles from "./Seance.module.scss";
 import { NavLink } from "react-router-dom";
 import Programme from "../../components/Seance/Programme";
-import DailySeance from "../../components/Seance/DailySeance";
 import { deleteSeance, getSeancesFromApi } from "../../apis/seance";
 import { SeanceContext } from "../../context/SeanceContext";
 import AddSeance from "../../components/Seance/components/AddSeance";
@@ -14,7 +13,7 @@ export default function Seance() {
   const [editSeance, setEditSeance] = useState(null);
   const [selectedSeance, setSelectedSeance] = useState(null);
   const [addingSeance, setAddingSeance] = useState(false);
-  console.log(seances);
+
   useEffect(() => {
     async function fetchSeances() {
       try {
@@ -44,12 +43,6 @@ export default function Seance() {
     setSelectedSeance(seance);
   };
 
-  const currentDay = new Date().toLocaleString("fr-FR", { weekday: "long" });
-
-  const todaySeance = seances.find(
-    (seance) => seance.day.toLowerCase() === currentDay.toLowerCase()
-  );
-
   return (
     <main className="mhFull">
       <section>
@@ -62,27 +55,22 @@ export default function Seance() {
       <section>
         <h2 className="mt-30 ml-10"> Séance :</h2>
       </section>
+
       <div>
-        <div>
-          <h3>Programme:</h3>
-          <Programme
-            seances={seances}
-            onSelectSeance={handleSelectSeance}
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-          />
-          {addingSeance ? (
-            <AddSeance setAddingSeance={setAddingSeance} />
-          ) : (
-            <button onClick={() => setAddingSeance(true)}>
-              Ajouter une Séance
-            </button>
-          )}
-        </div>
-        <div>
-          <h3>Seance du jour:</h3>
-          <DailySeance seance={todaySeance} />
-        </div>
+        <h3>Programme:</h3>
+        <Programme
+          seances={seances}
+          onSelectSeance={handleSelectSeance}
+          handleEdit={handleEdit}
+          handleDelete={handleDelete}
+        />
+        {addingSeance ? (
+          <AddSeance setAddingSeance={setAddingSeance} />
+        ) : (
+          <button onClick={() => setAddingSeance(true)}>
+            Ajouter une Séance
+          </button>
+        )}
       </div>
 
       <section>

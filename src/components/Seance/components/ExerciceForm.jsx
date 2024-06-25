@@ -1,146 +1,108 @@
 import React, { useState, useEffect } from "react";
 
-export default function ExerciseForm({ exercise = {}, onSave, onDelete }) {
-  const [formState, setFormState] = useState({
+export default function ExerciseForm({ exercise, onSave, onDelete }) {
+  const [exerciseState, setExerciseState] = useState({
     name: "",
-    sets: [],
+    sets: [{ reps: 0, weight: 0 }],
     rest: 0,
-    newReps: 0,
-    newWeight: 0,
   });
 
   useEffect(() => {
     if (exercise) {
-      setFormState({
-        name: exercise.name || "",
-        sets: exercise.sets || [],
-        rest: exercise.rest || 0,
-        newReps: 0,
-        newWeight: 0,
-      });
+      setExerciseState(exercise);
     }
   }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormState((prevState) => ({
+    setExerciseState((prevState) => ({
       ...prevState,
-      [name]: name === "rest" ? Number(value) : value,
+      [name]: value,
+    }));
+  };
+
+  const handleSetChange = (index, e) => {
+    const { name, value } = e.target;
+    const newSets = [...exerciseState.sets];
+    newSets[index] = { ...newSets[index], [name]: value };
+    setExerciseState((prevState) => ({
+      ...prevState,
+      sets: newSets,
     }));
   };
 
   const handleAddSet = () => {
-    const newSet = {
-      reps: formState.newReps,
-      weight: formState.newWeight,
-    };
-    setFormState((prevState) => ({
+    setExerciseState((prevState) => ({
       ...prevState,
-      sets: [...prevState.sets, newSet],
-      newReps: 0,
-      newWeight: 0,
-    }));
-  };
-
-  const handleSaveSet = (set, index) => {
-    setFormState((prevState) => ({
-      ...prevState,
-      sets: prevState.sets.map((s, i) => (i === index ? set : s)),
+      sets: [...prevState.sets, { reps: 0, weight: 0 }],
     }));
   };
 
   const handleDeleteSet = (index) => {
-    setFormState((prevState) => ({
+    const newSets = exerciseState.sets.filter((_, i) => i !== index);
+    setExerciseState((prevState) => ({
       ...prevState,
-      sets: prevState.sets.filter((_, i) => i !== index),
+      sets: newSets,
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSave(formState);
-    setFormState({
-      name: "",
-      sets: [],
-      rest: 0,
-      newReps: 0,
-      newWeight: 0,
-    });
+  const handleSave = () => {
+    onSave(exerciseState);
+    setExerciseState({ name: "", sets: [{ reps: 0, weight: 0 }], rest: 0 });
+  };
+
+  const handleDeleteExercise = () => {
+    if (onDelete) {
+      onDelete();
+    }
   };
 
   return (
     <div>
       <input
         name="name"
-        value={formState.name}
+        value={exerciseState.name}
         onChange={handleChange}
         placeholder="Nom de l'exercice"
       />
       <input
         name="rest"
-        value={formState.rest}
+        type="number"
+        value={exerciseState.rest}
         onChange={handleChange}
         placeholder="Temps de repos (secondes)"
-        type="number"
       />
-      <h4>Séries</h4>
-      {formState.sets.map((set, index) => (
-        <div key={index}>
-          <input
-            name="reps"
-            value={set.reps}
-            onChange={(e) => {
-              const newSets = [...formState.sets];
-              newSets[index].reps = Number(e.target.value);
-              setFormState({ ...formState, sets: newSets });
-            }}
-            placeholder="Nombre de répétitions"
-            type="number"
-          />
-          <input
-            name="weight"
-            value={set.weight}
-            onChange={(e) => {
-              const newSets = [...formState.sets];
-              newSets[index].weight = Number(e.target.value);
-              setFormState({ ...formState, sets: newSets });
-            }}
-            placeholder="Poids (kg)"
-            type="number"
-          />
-          <button type="button" onClick={() => handleDeleteSet(index)}>
-            Supprimer la série
-          </button>
-        </div>
-      ))}
       <div>
-        <input
-          name="newReps"
-          value={formState.newReps}
-          onChange={(e) =>
-            setFormState({ ...formState, newReps: Number(e.target.value) })
-          }
-          placeholder="Nombre de répétitions"
-          type="number"
-        />
-        <input
-          name="newWeight"
-          value={formState.newWeight}
-          onChange={(e) =>
-            setFormState({ ...formState, newWeight: Number(e.target.value) })
-          }
-          placeholder="Poids (kg)"
-          type="number"
-        />
+        {exerciseState.sets.map((set, index) => (
+          <div key={index}>
+            <input
+              name="reps"
+              type="number"
+              value={set.reps}
+              onChange={(e) => handleSetChange(index, e)}
+              placeholder="Nombre de répétitions"
+            />
+            <input
+              name="weight"
+              type="number"
+              value={set.weight}
+              onChange={(e) => handleSetChange(index, e)}
+              placeholder="Poids (kg)"
+            />
+            <button type="button" onClick={() => handleDeleteSet(index)}>
+              Supprimer la série
+            </button>
+          </div>
+        ))}
         <button type="button" onClick={handleAddSet}>
           Ajouter une série
         </button>
       </div>
-      <button type="button" onClick={onDelete}>
-        Supprimer l'exercice
-      </button>
-      <button type="button" onClick={handleSubmit}>
+      <button type="button" onClick={handleSave}>
         Enregistrer l'exercice
+      </button>
+      <button type="button" onClick={handleDeleteExercise}>
+        Supprimer l'exercice
       </button>
     </div>
   );

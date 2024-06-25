@@ -1,10 +1,26 @@
 const BASE_URL = "http://localhost:5000/api/prs";
 
-export async function getPRs() {
+export async function getPRs(exerciseId) {
   try {
     const response = await fetch(`${BASE_URL}/`);
     const prs = await response.json();
     return prs;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function savePR(exerciseId, sets) {
+  try {
+    const response = await fetch(`${BASE_URL}/${exerciseId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ sets }),
+    });
+    const updatedPR = await response.json();
+    return updatedPR;
   } catch (error) {
     console.error(error);
   }
@@ -47,6 +63,22 @@ export async function deletePR(id) {
     await fetch(`${BASE_URL}/${id}`, {
       method: "DELETE",
     });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getLastWeekPRs(exerciseIds) {
+  try {
+    const response = await fetch(`${BASE_URL}/last-week`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ exerciseIds }),
+    });
+    const prs = await response.json();
+    return prs;
   } catch (error) {
     console.error(error);
   }

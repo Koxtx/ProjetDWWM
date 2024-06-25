@@ -22,7 +22,7 @@ export default function Programme({
         <div key={day} className="day p-10">
           <h2>{day}</h2>
           {seances
-            .filter((seance) => seance.day === day)
+            .filter((seance) => seance.day.toLowerCase() === day.toLowerCase())
             .map((seance) => (
               <div key={seance._id}>
                 <p>Nom de la séance : {seance.name}</p>

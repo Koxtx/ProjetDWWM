@@ -30,18 +30,18 @@ export default function SeanceForm({
     }));
   };
 
-  const handleAddExercise = () => {
-    setFormState((prevState) => ({
-      ...prevState,
-      exercises: [...prevState.exercises, { name: "", sets: [], rest: 0 }],
-    }));
-  };
-
   const handleSaveExercise = (exercise, index) => {
     const newExercises = formState.exercises.map((ex, i) =>
       i === index ? exercise : ex
     );
     setFormState({ ...formState, exercises: newExercises });
+  };
+
+  const handleAddExercise = () => {
+    setFormState((prevState) => ({
+      ...prevState,
+      exercises: [...prevState.exercises, { name: "", sets: [], rest: 0 }],
+    }));
   };
 
   const handleDeleteExercise = (index) => {
@@ -91,15 +91,22 @@ export default function SeanceForm({
         />
         <select name="day" value={formState.day} onChange={handleChange}>
           <option value="">Sélectionnez un jour</option>
-          <option value="Lundi">Lundi</option>
-          <option value="Mardi">Mardi</option>
-          <option value="Mercredi">Mercredi</option>
-          <option value="Jeudi">Jeudi</option>
-          <option value="Vendredi">Vendredi</option>
-          <option value="Samedi">Samedi</option>
-          <option value="Dimanche">Dimanche</option>
+          {[
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi",
+            "Samedi",
+            "Dimanche",
+          ].map((day) => (
+            <option key={day} value={day}>
+              {day}
+            </option>
+          ))}
         </select>
-        <h3>Exercices</h3>
+
+        <h3>Exercises</h3>
         {formState.exercises.map((exercise, index) => (
           <div key={index}>
             <ExerciseForm
@@ -114,9 +121,7 @@ export default function SeanceForm({
         <button type="button" onClick={handleAddExercise}>
           Ajouter un exercice
         </button>
-        <button type="submit">
-          {editSeance ? "Mettre à jour la séance" : "Ajouter la séance"}
-        </button>
+        <button type="submit">Enregistrer la séance</button>
         <button type="button" onClick={handleCancel}>
           Annuler
         </button>
