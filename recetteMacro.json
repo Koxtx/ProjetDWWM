@@ -1,0 +1,424 @@
+[
+  {
+    "name": "Grilled Chicken with Broccoli",
+    "ingredients": [
+      {
+        "name": "Chicken Breast",
+        "calories": 165,
+        "protein": 31,
+        "carbs": 0,
+        "fat": 3.6
+      },
+      {
+        "name": "Broccoli",
+        "calories": 55,
+        "protein": 3.7,
+        "carbs": 11.2,
+        "fat": 0.6
+      },
+      {
+        "name": "Olive Oil",
+        "calories": 119,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 13.5
+      }
+    ],
+    "totalCalories": 339,
+    "totalProtein": 34.7,
+    "totalCarbs": 11.2,
+    "totalFat": 17.7,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "ingredients": [
+      {
+        "name": "Spaghetti",
+        "calories": 220,
+        "protein": 8,
+        "carbs": 43,
+        "fat": 1.3
+      },
+      {
+        "name": "Ground Beef",
+        "calories": 250,
+        "protein": 21,
+        "carbs": 0,
+        "fat": 17
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 80,
+        "protein": 2,
+        "carbs": 14,
+        "fat": 2
+      },
+      {
+        "name": "Parmesan Cheese",
+        "calories": 22,
+        "protein": 2,
+        "carbs": 0,
+        "fat": 1.5
+      }
+    ],
+    "totalCalories": 572,
+    "totalProtein": 33,
+    "totalCarbs": 57,
+    "totalFat": 21.8,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Caesar Salad",
+    "ingredients": [
+      {
+        "name": "Romaine Lettuce",
+        "calories": 15,
+        "protein": 1,
+        "carbs": 3,
+        "fat": 0.2
+      },
+      {
+        "name": "Chicken Breast",
+        "calories": 165,
+        "protein": 31,
+        "carbs": 0,
+        "fat": 3.6
+      },
+      {
+        "name": "Caesar Dressing",
+        "calories": 80,
+        "protein": 1,
+        "carbs": 2,
+        "fat": 8
+      },
+      {
+        "name": "Croutons",
+        "calories": 50,
+        "protein": 1,
+        "carbs": 10,
+        "fat": 0.5
+      },
+      {
+        "name": "Parmesan Cheese",
+        "calories": 22,
+        "protein": 2,
+        "carbs": 0,
+        "fat": 1.5
+      }
+    ],
+    "totalCalories": 332,
+    "totalProtein": 36,
+    "totalCarbs": 15,
+    "totalFat": 13.8,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Beef Tacos",
+    "ingredients": [
+      {
+        "name": "Ground Beef",
+        "calories": 250,
+        "protein": 21,
+        "carbs": 0,
+        "fat": 17
+      },
+      {
+        "name": "Tortilla",
+        "calories": 150,
+        "protein": 4,
+        "carbs": 25,
+        "fat": 4.5
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 113,
+        "protein": 7,
+        "carbs": 0,
+        "fat": 9
+      },
+      {
+        "name": "Lettuce",
+        "calories": 5,
+        "protein": 0.5,
+        "carbs": 1,
+        "fat": 0.1
+      },
+      {
+        "name": "Tomato",
+        "calories": 22,
+        "protein": 1,
+        "carbs": 4.8,
+        "fat": 0.2
+      }
+    ],
+    "totalCalories": 540,
+    "totalProtein": 33.5,
+    "totalCarbs": 30.8,
+    "totalFat": 30.8,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "ingredients": [
+      {
+        "name": "Broccoli",
+        "calories": 55,
+        "protein": 3.7,
+        "carbs": 11.2,
+        "fat": 0.6
+      },
+      {
+        "name": "Carrot",
+        "calories": 25,
+        "protein": 0.6,
+        "carbs": 6,
+        "fat": 0.1
+      },
+      {
+        "name": "Bell Pepper",
+        "calories": 24,
+        "protein": 1,
+        "carbs": 6,
+        "fat": 0.2
+      },
+      {
+        "name": "Soy Sauce",
+        "calories": 10,
+        "protein": 1,
+        "carbs": 1,
+        "fat": 0
+      },
+      {
+        "name": "Olive Oil",
+        "calories": 119,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 13.5
+      }
+    ],
+    "totalCalories": 233,
+    "totalProtein": 6.3,
+    "totalCarbs": 24.2,
+    "totalFat": 14.4,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Chicken Alfredo",
+    "ingredients": [
+      {
+        "name": "Fettuccine",
+        "calories": 220,
+        "protein": 8,
+        "carbs": 43,
+        "fat": 1.3
+      },
+      {
+        "name": "Chicken Breast",
+        "calories": 165,
+        "protein": 31,
+        "carbs": 0,
+        "fat": 3.6
+      },
+      {
+        "name": "Alfredo Sauce",
+        "calories": 200,
+        "protein": 4,
+        "carbs": 4,
+        "fat": 18
+      },
+      {
+        "name": "Parmesan Cheese",
+        "calories": 22,
+        "protein": 2,
+        "carbs": 0,
+        "fat": 1.5
+      }
+    ],
+    "totalCalories": 607,
+    "totalProtein": 45,
+    "totalCarbs": 47,
+    "totalFat": 24.4,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Turkey Sandwich",
+    "ingredients": [
+      {
+        "name": "Whole Wheat Bread",
+        "calories": 140,
+        "protein": 6,
+        "carbs": 26,
+        "fat": 2
+      },
+      {
+        "name": "Turkey Breast",
+        "calories": 60,
+        "protein": 12,
+        "carbs": 0,
+        "fat": 1
+      },
+      {
+        "name": "Lettuce",
+        "calories": 5,
+        "protein": 0.5,
+        "carbs": 1,
+        "fat": 0.1
+      },
+      {
+        "name": "Tomato",
+        "calories": 22,
+        "protein": 1,
+        "carbs": 4.8,
+        "fat": 0.2
+      },
+      {
+        "name": "Mayonnaise",
+        "calories": 90,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 10
+      }
+    ],
+    "totalCalories": 317,
+    "totalProtein": 19.5,
+    "totalCarbs": 31.8,
+    "totalFat": 13.3,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Shrimp Scampi",
+    "ingredients": [
+      {
+        "name": "Shrimp",
+        "calories": 120,
+        "protein": 23,
+        "carbs": 1,
+        "fat": 1.5
+      },
+      {
+        "name": "Garlic",
+        "calories": 10,
+        "protein": 0.5,
+        "carbs": 2,
+        "fat": 0
+      },
+      {
+        "name": "Butter",
+        "calories": 102,
+        "protein": 0.1,
+        "carbs": 0,
+        "fat": 11.5
+      },
+      {
+        "name": "Lemon Juice",
+        "calories": 10,
+        "protein": 0.2,
+        "carbs": 3.5,
+        "fat": 0
+      },
+      {
+        "name": "Spaghetti",
+        "calories": 220,
+        "protein": 8,
+        "carbs": 43,
+        "fat": 1.3
+      }
+    ],
+    "totalCalories": 462,
+    "totalProtein": 31.8,
+    "totalCarbs": 49.5,
+    "totalFat": 14.3,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Quinoa Salad",
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "calories": 222,
+        "protein": 8,
+        "carbs": 39,
+        "fat": 3.6
+      },
+      {
+        "name": "Cherry Tomatoes",
+        "calories": 30,
+        "protein": 1,
+        "carbs": 7,
+        "fat": 0.3
+      },
+      {
+        "name": "Cucumber",
+        "calories": 16,
+        "protein": 0.7,
+        "carbs": 3.8,
+        "fat": 0.1
+      },
+      {
+        "name": "Feta Cheese",
+        "calories": 75,
+        "protein": 4,
+        "carbs": 1,
+        "fat": 6
+      },
+      {
+        "name": "Olive Oil",
+        "calories": 119,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 13.5
+      }
+    ],
+    "totalCalories": 462,
+    "totalProtein": 13.7,
+    "totalCarbs": 50.8,
+    "totalFat": 23.5,
+    "date": "2024-06-28T00:00:00.000Z"
+  },
+  {
+    "name": "Beef Stew",
+    "ingredients": [
+      {
+        "name": "Beef",
+        "calories": 250,
+        "protein": 26,
+        "carbs": 0,
+        "fat": 15
+      },
+      {
+        "name": "Potatoes",
+        "calories": 163,
+        "protein": 4.3,
+        "carbs": 37,
+        "fat": 0.2
+      },
+      {
+        "name": "Carrots",
+        "calories": 25,
+        "protein": 0.6,
+        "carbs": 6,
+        "fat": 0.1
+      },
+      {
+        "name": "Onion",
+        "calories": 40,
+        "protein": 1.1,
+        "carbs": 9.3,
+        "fat": 0.1
+      },
+      {
+        "name": "Beef Broth",
+        "calories": 15,
+        "protein": 2,
+        "carbs": 1,
+        "fat": 0.5
+      }
+    ],
+    "totalCalories": 493,
+    "totalProtein": 34,
+    "totalCarbs": 53.3,
+    "totalFat": 15.8,
+    "date": "2024-06-28T00:00:00.000Z"
+  }
+]

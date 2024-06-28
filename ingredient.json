@@ -1,0 +1,233 @@
+[
+  {
+    "name": "Chicken Breast",
+    "calories": 165,
+    "protein": 31,
+    "carbs": 0,
+    "fat": 3.6
+  },
+  {
+    "name": "Broccoli",
+    "calories": 55,
+    "protein": 3.7,
+    "carbs": 11.2,
+    "fat": 0.6
+  },
+  {
+    "name": "Olive Oil",
+    "calories": 119,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 13.5
+  },
+  {
+    "name": "Spaghetti",
+    "calories": 220,
+    "protein": 8,
+    "carbs": 43,
+    "fat": 1.3
+  },
+  {
+    "name": "Ground Beef",
+    "calories": 250,
+    "protein": 21,
+    "carbs": 0,
+    "fat": 17
+  },
+  {
+    "name": "Tomato Sauce",
+    "calories": 80,
+    "protein": 2,
+    "carbs": 14,
+    "fat": 2
+  },
+  {
+    "name": "Parmesan Cheese",
+    "calories": 22,
+    "protein": 2,
+    "carbs": 0,
+    "fat": 1.5
+  },
+  {
+    "name": "Romaine Lettuce",
+    "calories": 15,
+    "protein": 1,
+    "carbs": 3,
+    "fat": 0.2
+  },
+  {
+    "name": "Caesar Dressing",
+    "calories": 80,
+    "protein": 1,
+    "carbs": 2,
+    "fat": 8
+  },
+  {
+    "name": "Croutons",
+    "calories": 50,
+    "protein": 1,
+    "carbs": 10,
+    "fat": 0.5
+  },
+  {
+    "name": "Tortilla",
+    "calories": 150,
+    "protein": 4,
+    "carbs": 25,
+    "fat": 4.5
+  },
+  {
+    "name": "Cheddar Cheese",
+    "calories": 113,
+    "protein": 7,
+    "carbs": 0,
+    "fat": 9
+  },
+  {
+    "name": "Lettuce",
+    "calories": 5,
+    "protein": 0.5,
+    "carbs": 1,
+    "fat": 0.1
+  },
+  {
+    "name": "Tomato",
+    "calories": 22,
+    "protein": 1,
+    "carbs": 4.8,
+    "fat": 0.2
+  },
+  {
+    "name": "Carrot",
+    "calories": 25,
+    "protein": 0.6,
+    "carbs": 6,
+    "fat": 0.1
+  },
+  {
+    "name": "Bell Pepper",
+    "calories": 24,
+    "protein": 1,
+    "carbs": 6,
+    "fat": 0.2
+  },
+  {
+    "name": "Soy Sauce",
+    "calories": 10,
+    "protein": 1,
+    "carbs": 1,
+    "fat": 0
+  },
+  {
+    "name": "Fettuccine",
+    "calories": 220,
+    "protein": 8,
+    "carbs": 43,
+    "fat": 1.3
+  },
+  {
+    "name": "Alfredo Sauce",
+    "calories": 200,
+    "protein": 4,
+    "carbs": 4,
+    "fat": 18
+  },
+  {
+    "name": "Whole Wheat Bread",
+    "calories": 140,
+    "protein": 6,
+    "carbs": 26,
+    "fat": 2
+  },
+  {
+    "name": "Turkey Breast",
+    "calories": 60,
+    "protein": 12,
+    "carbs": 0,
+    "fat": 1
+  },
+  {
+    "name": "Mayonnaise",
+    "calories": 90,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 10
+  },
+  {
+    "name": "Shrimp",
+    "calories": 120,
+    "protein": 23,
+    "carbs": 1,
+    "fat": 1.5
+  },
+  {
+    "name": "Garlic",
+    "calories": 10,
+    "protein": 0.5,
+    "carbs": 2,
+    "fat": 0
+  },
+  {
+    "name": "Butter",
+    "calories": 102,
+    "protein": 0.1,
+    "carbs": 0,
+    "fat": 11.5
+  },
+  {
+    "name": "Lemon Juice",
+    "calories": 10,
+    "protein": 0.2,
+    "carbs": 3.5,
+    "fat": 0
+  },
+  {
+    "name": "Quinoa",
+    "calories": 222,
+    "protein": 8,
+    "carbs": 39,
+    "fat": 3.6
+  },
+  {
+    "name": "Cherry Tomatoes",
+    "calories": 30,
+    "protein": 1,
+    "carbs": 7,
+    "fat": 0.3
+  },
+  {
+    "name": "Cucumber",
+    "calories": 16,
+    "protein": 0.7,
+    "carbs": 3.8,
+    "fat": 0.1
+  },
+  {
+    "name": "Feta Cheese",
+    "calories": 75,
+    "protein": 4,
+    "carbs": 1,
+    "fat": 6
+  },
+  {
+    "name": "Potatoes",
+    "calories": 163,
+    "protein": 4.3,
+    "carbs": 37,
+    "fat": 0.2
+  },
+  {
+    "name": "Onion",
+    "calories": 40,
+    "protein": 1.1,
+    "carbs": 9.3,
+    "fat": 0.1
+  },
+  {
+    "name": "Beef Broth",
+    "calories": 15,
+    "protein": 2,
+    "carbs": 1,
+    "fat": 0.5
+  }
+]

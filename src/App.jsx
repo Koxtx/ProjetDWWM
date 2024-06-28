@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import UserProvider from "./components/Providers/UserProvider";
 import SeanceProvider from "./components/Providers/SeanceProvider";
 import PrProvider from "./components/Providers/PrProvider";
+import MealProvider from "./components/Providers/MealProvider";
 
 function App() {
   const [exercices, setExercices] = useState([]);
@@ -58,10 +59,12 @@ function App() {
       <UserProvider>
         <SeanceProvider>
           <PrProvider>
-            <Header />
-            <Outlet context={{ exercices, toggleLiked, recettes }} />
-            <Footer />
-            <ScrollRestoration />
+            <MealProvider>
+              <Header />
+              <Outlet context={{ exercices, toggleLiked, recettes }} />
+              <Footer />
+              <ScrollRestoration />
+            </MealProvider>
           </PrProvider>
         </SeanceProvider>
       </UserProvider>
