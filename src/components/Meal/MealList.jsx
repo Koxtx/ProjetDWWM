@@ -15,7 +15,7 @@ export default function MealList() {
               <div>
                 <h4>Ingrédients :</h4>
                 <ul>
-                  {ingredients.map((ingredient, index) => (
+                  {meal.ingredients.map((ingredient, index) => (
                     <li key={index}>
                       {ingredient.name} - {ingredient.calories} Calories,{" "}
                       {ingredient.protein}g Protéines, {ingredient.carbs}g

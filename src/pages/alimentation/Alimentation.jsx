@@ -4,6 +4,8 @@ import styles from "./Alimentation.module.scss";
 import { NavLink } from "react-router-dom";
 import MealForm from "../../components/Meal/MealForm";
 import MealList from "../../components/Meal/MealList";
+import GoalForm from "../../components/Meal/GoalForm";
+import Progress from "../../components/Meal/Progress";
 
 export default function Alimentation() {
   return (
@@ -14,6 +16,8 @@ export default function Alimentation() {
       <section>
         <h2 className="mt-30 ml-10"> Alimentation :</h2>
         <MealForm />
+        <GoalForm />
+        <Progress />
         <MealList />
       </section>
       <section>

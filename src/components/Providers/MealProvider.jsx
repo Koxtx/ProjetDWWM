@@ -1,38 +1,62 @@
 import React, { useEffect, useState } from "react";
 import { MealContext } from "../../context/MealContext";
 import { getMeals, getIngredients } from "../../apis/meal";
+import { getGoals, postGoal, updateGoal, deleteGoal } from "../../apis/goal";
 
 export default function MealProvider({ children }) {
   const [meals, setMeals] = useState([]);
   const [ingredients, setIngredients] = useState([]);
+  const [goals, setGoals] = useState({
+    dailyCalories: 0,
+    dailyProtein: 0,
+    dailyCarbs: 0,
+    dailyFat: 0,
+  });
 
   useEffect(() => {
-    const fetchMeals = async () => {
+    const fetchData = async () => {
       try {
         const mealsData = await getMeals();
-        setMeals(mealsData || []);
-      } catch (error) {
-        console.error("Error:", error);
-        setMeals([]); // Assurez-vous que meals est un tableau
-      }
-    };
-    const fetchIngredients = async () => {
-      try {
         const ingredientsData = await getIngredients();
-        setIngredients(ingredientsData || []);
+        const goalsData = await getGoals();
+
+        setMeals(mealsData);
+        setIngredients(ingredientsData);
+
+        if (Array.isArray(goalsData) && goalsData.length > 0) {
+          setGoals(goalsData[0]); // Assuming a single goal object for simplicity
+        }
       } catch (error) {
-        console.error("Error:", error);
-        setIngredients([]); // Assurez-vous que ingredients est un tableau
+        console.error("Error fetching data", error);
       }
     };
-
-    fetchMeals();
-    fetchIngredients();
+    fetchData();
   }, []);
 
+  const saveGoals = async (newGoals) => {
+    try {
+      let savedGoal;
+      if (goals._id) {
+        savedGoal = await updateGoal(goals._id, newGoals);
+      } else {
+        savedGoal = await postGoal(newGoals);
+      }
+      setGoals(savedGoal);
+    } catch (error) {
+      console.error("Error saving goals", error);
+    }
+  };
   return (
     <MealContext.Provider
-      value={{ meals, setMeals, ingredients, setIngredients }}
+      value={{
+        meals,
+        setMeals,
+        ingredients,
+        setIngredients,
+        goals,
+        setGoals,
+        saveGoals,
+      }}
     >
       {children}
     </MealContext.Provider>

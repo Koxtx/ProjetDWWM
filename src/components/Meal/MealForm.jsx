@@ -3,8 +3,16 @@ import { MealContext } from "../../context/MealContext";
 import { postMeal } from "../../apis/meal";
 
 export default function MealForm() {
-  const { meals, setMeals, ingredients } = useContext(MealContext);
+  const { meals, setMeals, ingredients, setIngredients } =
+    useContext(MealContext);
   const [selectedIngredient, setSelectedIngredient] = useState("");
+  const [customIngredient, setCustomIngredient] = useState({
+    name: "",
+    calories: "",
+    protein: "",
+    carbs: "",
+    fat: "",
+  });
   const [option, setOption] = useState("simple");
   const [meal, setMeal] = useState({
     name: "",
@@ -21,7 +29,13 @@ export default function MealForm() {
   };
 
   const handleIngredientChange = (e) => {
-    setSelectedIngredient(e.target.value);
+    const { name, value } = e.target;
+    setSelectedIngredient(value);
+  };
+
+  const handleCustomIngredientChange = (e) => {
+    const { name, value } = e.target;
+    setCustomIngredient({ ...customIngredient, [name]: value });
   };
 
   const addIngredient = () => {
@@ -29,11 +43,36 @@ export default function MealForm() {
       const ingredient = ingredients.find(
         (ing) => ing._id === selectedIngredient
       );
-      if (ingredient) {
-        setMeal({ ...meal, ingredients: [...meal.ingredients, ingredient] });
-        setSelectedIngredient("");
-      }
+      const updatedMeal = {
+        ...meal,
+        ingredients: [...meal.ingredients, ingredient],
+        totalCalories: meal.totalCalories + ingredient.calories,
+        totalProtein: meal.totalProtein + ingredient.protein,
+        totalCarbs: meal.totalCarbs + ingredient.carbs,
+        totalFat: meal.totalFat + ingredient.fat,
+      };
+      setMeal(updatedMeal);
+      setSelectedIngredient("");
     }
+  };
+
+  const addCustomIngredient = () => {
+    const updatedMeal = {
+      ...meal,
+      ingredients: [...meal.ingredients, customIngredient],
+      totalCalories: meal.totalCalories + parseFloat(customIngredient.calories),
+      totalProtein: meal.totalProtein + parseFloat(customIngredient.protein),
+      totalCarbs: meal.totalCarbs + parseFloat(customIngredient.carbs),
+      totalFat: meal.totalFat + parseFloat(customIngredient.fat),
+    };
+    setMeal(updatedMeal);
+    setCustomIngredient({
+      name: "",
+      calories: "",
+      protein: "",
+      carbs: "",
+      fat: "",
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -131,7 +170,47 @@ export default function MealForm() {
             ))}
           </select>
           <button type="button" onClick={addIngredient}>
-            Ajouter l'ingrédient
+            Ajouter l'ingrédient de la base de données
+          </button>
+
+          <h3>Ou ajouter un ingrédient personnalisé</h3>
+          <input
+            type="text"
+            name="name"
+            value={customIngredient.name}
+            onChange={handleCustomIngredientChange}
+            placeholder="Nom de l'ingrédient"
+          />
+          <input
+            type="number"
+            name="calories"
+            value={customIngredient.calories}
+            onChange={handleCustomIngredientChange}
+            placeholder="Calories"
+          />
+          <input
+            type="number"
+            name="protein"
+            value={customIngredient.protein}
+            onChange={handleCustomIngredientChange}
+            placeholder="Protéines"
+          />
+          <input
+            type="number"
+            name="carbs"
+            value={customIngredient.carbs}
+            onChange={handleCustomIngredientChange}
+            placeholder="Glucides"
+          />
+          <input
+            type="number"
+            name="fat"
+            value={customIngredient.fat}
+            onChange={handleCustomIngredientChange}
+            placeholder="Lipides"
+          />
+          <button type="button" onClick={addCustomIngredient}>
+            Ajouter l'ingrédient personnalisé
           </button>
           <button type="submit">Ajouter le repas</button>
         </form>
@@ -150,7 +229,7 @@ export default function MealForm() {
           <h3>Ingrédients Communs</h3>
           {meal.ingredients.map((ing, index) => (
             <div key={index}>
-              {ingredients.find((i) => i._id === ing._id)?.name}
+              {ingredients.find((i) => i._id === ing._id).name}
             </div>
           ))}
           <select value={selectedIngredient} onChange={handleIngredientChange}>
