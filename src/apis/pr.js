@@ -67,19 +67,3 @@ export async function deletePR(id) {
     console.error(error);
   }
 }
-
-export async function getLastWeekPRs(exerciseIds) {
-  try {
-    const response = await fetch(`${BASE_URL}/last-week`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ exerciseIds }),
-    });
-    const prs = await response.json();
-    return prs;
-  } catch (error) {
-    console.error(error);
-  }
-}

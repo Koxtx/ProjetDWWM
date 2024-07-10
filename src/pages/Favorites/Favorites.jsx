@@ -9,7 +9,7 @@ export default function Favorites() {
       {exercices
         .filter((e) => e.liked !== false)
         .map((e) => (
-          <div className={`card p-20 d-flex flex-column `}>
+          <div key={e._id} className={`card p-20 d-flex flex-column `}>
             <p>
               <span>Exercice : </span>
               {e.name}
@@ -37,7 +37,7 @@ export default function Favorites() {
       {recettes
         .filter((r) => r.liked !== false)
         .map((r) => (
-          <div className={`card p-20 d-flex flex-column `}>
+          <div key={r._id} className={`card p-20 d-flex flex-column `}>
             <p>
               <span>nom : </span>
               {r.name}

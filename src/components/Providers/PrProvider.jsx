@@ -7,8 +7,14 @@ export default function PrProvider({ children }) {
 
   const savePerformance = async (exerciseId, sets) => {
     try {
-      await savePR(exerciseId, sets); // Utiliser l'API pour sauvegarder les performances
+      await savePR(exerciseId, sets);
       console.log("Performance saved");
+      // Optionally, update local state after saving
+      const updatedPRs = await getPRs(exerciseId);
+      setPRs((prevPRs) => [
+        ...prevPRs.filter((pr) => pr.exerciseId !== exerciseId),
+        ...updatedPRs,
+      ]);
     } catch (error) {
       console.error("Error saving performance:", error);
     }
@@ -16,7 +22,7 @@ export default function PrProvider({ children }) {
 
   const getPerformance = async (exerciseId) => {
     try {
-      const prs = await getPRs(exerciseId); // Utiliser l'API pour récupérer les performances
+      const prs = await getPRs(exerciseId);
       return prs;
     } catch (error) {
       console.error("Error fetching performance:", error);
@@ -26,8 +32,10 @@ export default function PrProvider({ children }) {
   useEffect(() => {
     const fetchPRs = async () => {
       try {
-        const prsData = await getPRs(); // Utiliser l'API pour récupérer les performances
-        setPRs(prsData || []); // Assurez-vous que les données sont bien un tableau
+        const prsData = await getPRs();
+        if (prsData) {
+          setPRs(prsData);
+        }
       } catch (error) {
         console.error("Error fetching prs:", error);
       }

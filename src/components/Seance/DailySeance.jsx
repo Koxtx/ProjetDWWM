@@ -38,7 +38,6 @@ export default function DailySeance({ seance }) {
   return (
     <div>
       <h3>{seance.name}</h3>
-      <p>Jour: {seance.day}</p>
       {seance.exercises.map((exercise, index) => (
         <ExercisePerformance
           key={index}

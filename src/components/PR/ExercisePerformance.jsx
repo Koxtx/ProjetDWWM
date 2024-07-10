@@ -1,23 +1,53 @@
 import React, { useState, useContext, useEffect } from "react";
 import { PrContext } from "../../context/PrContext";
+import PRComparison from "./PRComparison";
+import BestPerformance from "./BestPerformance";
 
 export default function ExercisePerformance({ exercise, bestPerformance }) {
-  const { savePerformance } = useContext(PrContext);
-  const [sets, setSets] = useState(exercise.sets);
+  const { savePerformance, getPerformance } = useContext(PrContext);
+  const [sets, setSets] = useState(exercise.sets || []);
   const [editMode, setEditMode] = useState(true);
+  const { prs, setPRs } = useContext(PrContext);
+  const [currentPR, setCurrentPR] = useState(null);
 
   useEffect(() => {
+    // Récupérer les valeurs sauvegardées dans localStorage lors du montage du composant
     const savedSets = JSON.parse(localStorage.getItem(`sets-${exercise._id}`));
     const savedEditMode = JSON.parse(
       localStorage.getItem(`editMode-${exercise._id}`)
     );
-    if (savedSets) {
+
+    if (savedSets && savedSets.length) {
       setSets(savedSets);
+    } else {
+      setSets(exercise.sets);
     }
+
     if (savedEditMode !== null) {
       setEditMode(savedEditMode);
     }
-  }, [exercise._id]);
+  }, []);
+
+  useEffect(() => {
+    const fetchPerformance = async () => {
+      const fetchedPRs = await getPerformance(exercise._id);
+      setPRs(fetchedPRs);
+      if (fetchedPRs.length > 0) {
+        setCurrentPR(fetchedPRs[fetchedPRs.length - 1]);
+      }
+    };
+
+    fetchPerformance();
+  }, []);
+
+  useEffect(() => {
+    // Sauvegarder les valeurs dans localStorage lorsque sets ou editMode changent
+    localStorage.setItem(`sets-${exercise._id}`, JSON.stringify(sets));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(`editMode-${exercise._id}`, JSON.stringify(editMode));
+  }, []);
 
   const handleInputChange = (index, e) => {
     const { name, value } = e.target;
@@ -34,14 +64,10 @@ export default function ExercisePerformance({ exercise, bestPerformance }) {
     setSets(newSets);
     savePerformance(exercise._id, newSets);
     setEditMode(false);
-
-    localStorage.setItem(`sets-${exercise._id}`, JSON.stringify(newSets));
-    localStorage.setItem(`editMode-${exercise._id}`, JSON.stringify(false));
   };
 
   const handleEdit = () => {
     setEditMode(true);
-    localStorage.setItem(`editMode-${exercise._id}`, JSON.stringify(true));
   };
 
   return (
@@ -80,6 +106,10 @@ export default function ExercisePerformance({ exercise, bestPerformance }) {
           )}
         </div>
       ))}
+      {currentPR && (
+        <PRComparison currentPR={currentPR} exerciseName={exercise.name} />
+      )}
+      <BestPerformance exerciseName={exercise.name} prs={prs} />
     </div>
   );
 }

@@ -2,8 +2,10 @@ import React from "react";
 import oeufs from "../../image/oeufs.jpg";
 import styles from "./Alimentation.module.scss";
 import { NavLink } from "react-router-dom";
-import MealForm from "../../components/Meal/MealForm";
-import MealList from "../../components/Meal/MealList";
+import NutrientSearch from "../../components/Meal/NutrientSearch";
+import FoodInfo from "../../components/Meal/FoodInfo";
+import UnitConversion from "../../components/Meal/UnitConversion";
+import MealPlanner from "../../components/Meal/MealPlanner";
 import GoalForm from "../../components/Meal/GoalForm";
 import Progress from "../../components/Meal/Progress";
 
@@ -15,16 +17,18 @@ export default function Alimentation() {
       </section>
       <section>
         <h2 className="mt-30 ml-10"> Alimentation :</h2>
-        <MealForm />
+        <NutrientSearch />
+        <FoodInfo />
+        <UnitConversion />
+        <MealPlanner />
         <GoalForm />
         <Progress />
-        <MealList />
       </section>
       <section>
         <div>
           <ul>
             <NavLink end to="/Recettes">
-              tous
+              Tous
             </NavLink>
             <NavLink to="/Recettes/Petit-déjeuner">Petit-déjeuner</NavLink>
             <NavLink to="/Recettes/Déjeuner">Déjeuner</NavLink>

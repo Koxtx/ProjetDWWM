@@ -1,18 +1,38 @@
 .recetteCard {
-  width: 400px;
-  height: 650px;
-  border-radius: 5px;
-  margin: 20px;
-  color: white;
-  background-color: var(--secondary);
-  .recette {
-    font-size: 20px;
-    margin: 10px;
-  }
-  .logo {
-    width: 100px;
-  }
-  i {
-    font-size: 20px;
-  }
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.recetteCard:hover {
+  transform: scale(1.05);
+}
+
+.recetteName {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.recetteType,
+.recetteIngredients,
+.recetteProtein,
+.recetteCalories,
+.recettePreparation {
+  margin-bottom: 10px;
+}
+
+.recettePreparation ol,
+.recettePreparation ul {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
 }

@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 import UserProvider from "./components/Providers/UserProvider";
 import SeanceProvider from "./components/Providers/SeanceProvider";
 import PrProvider from "./components/Providers/PrProvider";
-import MealProvider from "./components/Providers/MealProvider";
+
+import RecettesPrivider from "./components/Providers/RecettesPrivider";
 
 function App() {
   const [exercices, setExercices] = useState([]);
@@ -57,16 +58,16 @@ function App() {
      ${styles.main}`}
     >
       <UserProvider>
-        <SeanceProvider>
-          <PrProvider>
-            <MealProvider>
+        <RecettesPrivider>
+          <SeanceProvider>
+            <PrProvider>
               <Header />
               <Outlet context={{ exercices, toggleLiked, recettes }} />
               <Footer />
               <ScrollRestoration />
-            </MealProvider>
-          </PrProvider>
-        </SeanceProvider>
+            </PrProvider>
+          </SeanceProvider>
+        </RecettesPrivider>
       </UserProvider>
     </div>
   );

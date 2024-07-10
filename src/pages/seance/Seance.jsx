@@ -7,6 +7,7 @@ import { deleteSeance, getSeancesFromApi } from "../../apis/seance";
 import { SeanceContext } from "../../context/SeanceContext";
 import AddSeance from "../../components/Seance/components/AddSeance";
 import EditSeance from "../../components/Seance/components/EditSeance";
+import ExerciseList from "../../components/Seance/ExerciseList";
 
 export default function Seance() {
   const { seances, setSeances } = useContext(SeanceContext);
@@ -72,6 +73,9 @@ export default function Seance() {
           </button>
         )}
       </div>
+      <section>
+        <ExerciseList />
+      </section>
 
       <section>
         <div>
