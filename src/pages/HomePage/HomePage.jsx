@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import styles from "./HomePage.module.scss";
 import WomanHaltero from "../../image/woman-haltero.jpg";
 import { NavLink } from "react-router-dom";
-import DailySeance from "../../components/Seance/DailySeance";
-import { SeanceContext } from "../../context/SeanceContext";
+import { UserContext } from "../../context/UserContext";
 
 export default function HomePage() {
-  const { seances, loading } = useContext(SeanceContext);
+  const { user } = useContext(UserContext);
   const currentDay = new Date().toLocaleString("fr-FR", { weekday: "long" });
   const todaySeance = seances.find(
     (seance) => seance.day.toLowerCase() === currentDay.toLowerCase()
@@ -24,10 +23,6 @@ export default function HomePage() {
           className={`${styles.image}`}
           alt="Woman haltero"
         />
-      </section>
-      <section className="mb-20 mt-30 d-flex flex-column">
-        <h3>Séance du jour :</h3>
-        <DailySeance seance={todaySeance} />
       </section>
 
       <div>

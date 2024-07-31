@@ -2,12 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Error404 from "./pages/error404/Error404";
 import HomePage from "./pages/HomePage/HomePage";
-import Seance from "./pages/seance/Seance";
-import Alimentation from "./pages/alimentation/Alimentation";
 import FormInscrip from "./pages/FormInscrip/FormInscrip";
 import Connexion from "./pages/Connexion/Connexion";
-import ExExos from "./pages/exExos/ExExos";
-import ExRecette from "./pages/exRecette/ExRecette";
 import Profile from "./pages/Profile/Profile";
 import Logout from "./components/Logout";
 import UserConnected from "./components/ProtectedRoutes/UserConnected";
@@ -16,7 +12,6 @@ import ForgetPassword from "./pages/Password/ForgetPassword";
 import ResetPassword from "./pages/Password/ResetPassword";
 import MentionLegal from "./pages/mentionLegal/MentionLegal";
 import PolitiqueConfidentialite from "./pages/PolitiqueCofidentialité/PolitiqueConfidentialite";
-import Favorites from "./pages/Favorites/Favorites";
 
 export const router = createBrowserRouter([
   {
@@ -26,24 +21,13 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
-      },
-      {
-        path: "/séance",
         element: (
           <UserConnected>
-            <Seance />
+            <HomePage />
           </UserConnected>
         ),
       },
-      {
-        path: "/alimentation",
-        element: (
-          <UserConnected>
-            <Alimentation />
-          </UserConnected>
-        ),
-      },
+
       {
         path: "/connexion",
         element: (
@@ -60,26 +44,7 @@ export const router = createBrowserRouter([
           </UserNotConnected>
         ),
       },
-      {
-        path: "/Exercices",
-        element: <ExExos />,
-        children: [
-          {
-            path: ":bodyPart",
-            element: <ExExos />,
-          },
-        ],
-      },
-      {
-        path: "/Recettes",
-        element: <ExRecette />,
-        children: [
-          {
-            path: ":mealType",
-            element: <ExRecette />,
-          },
-        ],
-      },
+
       {
         path: "/forgetpassword",
         element: (
@@ -119,14 +84,6 @@ export const router = createBrowserRouter([
       {
         path: "/politiquedeconfidentialité",
         element: <PolitiqueConfidentialite />,
-      },
-      {
-        path: "/favorites",
-        element: (
-          <UserConnected>
-            <Favorites />
-          </UserConnected>
-        ),
       },
     ],
   },

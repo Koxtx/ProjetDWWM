@@ -6,68 +6,21 @@ import { useState, useEffect } from "react";
 import UserProvider from "./components/Providers/UserProvider";
 import SeanceProvider from "./components/Providers/SeanceProvider";
 import PrProvider from "./components/Providers/PrProvider";
+import MealProvider from "./components/Providers/MealProvider";
 
 import RecettesPrivider from "./components/Providers/RecettesPrivider";
 
 function App() {
-  const [exercices, setExercices] = useState([]);
-  const [recettes, setRecettes] = useState([]);
-
-  // récupération BDD avec useEffect
-  useEffect(() => {
-    async function getAllExercices() {
-      try {
-        const response = await fetch("http://localhost:5000/api/exercices");
-        if (response.ok) {
-          const allExercices = await response.json();
-          setExercices(allExercices);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getAllExercices();
-    async function getAllRecettes() {
-      try {
-        const response = await fetch("http://localhost:5000/api/recettes");
-        if (response.ok) {
-          const allRecettes = await response.json();
-          setRecettes(allRecettes);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getAllExercices();
-    getAllRecettes();
-  }, []);
-
-  function toggleLiked(i) {
-    console.log(i);
-    setExercices(
-      exercices.map((e) => (e._id === i ? { ...e, liked: !e.liked } : e))
-    );
-    setRecettes(
-      recettes.map((r) => (r._id === i ? { ...r, liked: !r.liked } : r))
-    );
-  }
-
   return (
     <div
       className={`mhFull
      ${styles.main}`}
     >
       <UserProvider>
-        <RecettesPrivider>
-          <SeanceProvider>
-            <PrProvider>
-              <Header />
-              <Outlet context={{ exercices, toggleLiked, recettes }} />
-              <Footer />
-              <ScrollRestoration />
-            </PrProvider>
-          </SeanceProvider>
-        </RecettesPrivider>
+        <Header />
+        <Outlet />
+        <Footer />
+        <ScrollRestoration />
       </UserProvider>
     </div>
   );
