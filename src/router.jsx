@@ -13,6 +13,7 @@ import ResetPassword from "./pages/Password/ResetPassword";
 import MentionLegal from "./pages/mentionLegal/MentionLegal";
 import PolitiqueConfidentialite from "./pages/PolitiqueCofidentialité/PolitiqueConfidentialite";
 import WorkoutList from "./pages/Workouts/WorkoutList";
+import NutritionList from "./pages/Nutrition/NutritionList";
 
 export const router = createBrowserRouter([
   {
@@ -87,6 +88,7 @@ export const router = createBrowserRouter([
         element: <PolitiqueConfidentialite />,
       },
       { path: "/workout", element: <WorkoutList /> },
+      { path: "/nutrition", element: <NutritionList /> },
     ],
   },
 ]);

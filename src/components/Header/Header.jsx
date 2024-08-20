@@ -25,10 +25,13 @@ export default function Header() {
               <NavLink className=" btn mr-60" to="/workout">
                 Séance
               </NavLink>
-              <NavLink className="mr-15" to="/profile">
+              <NavLink className=" btn mr-60" to="/nutrition">
+                Nutrition
+              </NavLink>
+              <NavLink className="mr-60" to="/profile">
                 <span>Profile</span>
               </NavLink>
-              <NavLink className="mr-15" to="/logout">
+              <NavLink className="mr-60" to="/logout">
                 <span>Logout</span>
               </NavLink>
             </>

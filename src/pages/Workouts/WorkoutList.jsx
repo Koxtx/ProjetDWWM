@@ -8,8 +8,9 @@ export default function WorkoutList() {
     if (token) {
       fetchWorkouts();
     }
-  }, [fetchWorkouts, token]);
-  if (loading) return <p>Loading...</p>;
+  }, []);
+  if (loading)
+    return <p className="d-flex flex-column center flex-fill">Loading...</p>;
 
   return (
     <main className="d-flex flex-column center flex-fill">
