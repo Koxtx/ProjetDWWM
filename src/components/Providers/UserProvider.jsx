@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
+import { jwtDecode } from "jwt-decode";
 
 export default function UserProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -33,6 +34,20 @@ export default function UserProvider({ children }) {
     setUser(userConnected);
     setToken(userConnected.token); // Assurez-vous que le token est mis à jour
   }
+
+  useEffect(() => {
+    const userStorage = JSON.parse(localStorage.getItem("user"));
+    if (userStorage) {
+      const { token, user } = userStorage;
+      const decodedToken = jwtDecode(token);
+      if (decodedToken.exp * 1000 < Date.now()) {
+        logoutConnectedUser();
+      } else {
+        setUser(user);
+        setToken(token);
+      }
+    }
+  }, []);
 
   return (
     <UserContext.Provider

@@ -3,6 +3,7 @@ import { UserContext } from "../context/UserContext";
 
 export default function Logout() {
   const { logoutConnectedUser } = useContext(UserContext);
+
   useEffect(() => {
     logoutConnectedUser();
   }, []);

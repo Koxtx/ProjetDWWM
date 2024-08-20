@@ -11,6 +11,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { NutritionContext } from "../../context/NutritionContext";
+import { WorkoutsContext } from "../../context/WorkoutsContext";
 
 ChartJS.register(
   CategoryScale,
@@ -24,58 +25,58 @@ ChartJS.register(
 
 export default function Dashboard() {
   const { nutritionData } = useContext(NutritionContext);
+  const { workouts } = useContext(WorkoutsContext);
   const [chartData, setChartData] = useState({ labels: [], datasets: [] });
   useEffect(() => {
-    if (nutritionData && nutritionData.length > 0) {
-      const labels = [];
-      const calories = [];
-      const protein = [];
-      const carbs = [];
-      const fat = [];
-
-      nutritionData.forEach((nutritionItem) => {
-        nutritionItem.meals.forEach((meal) => {
-          labels.push(meal.name);
-          calories.push(meal.calories);
-          protein.push(meal.protein);
-          carbs.push(meal.carbs);
-          fat.push(meal.fat);
-        });
-      });
+    if (workouts && workouts.length > 0) {
+      const dates = workouts.map((workout) =>
+        new Date(workout.date).toLocaleDateString()
+      );
+      const calories = workouts.map((workout) =>
+        workout.exercises.reduce(
+          (total, exercise) => total + exercise.caloriesBurned,
+          0
+        )
+      );
 
       setChartData({
-        labels,
+        labels: dates,
         datasets: [
           {
-            label: "Calories",
+            label: "Calories Burned",
             data: calories,
             backgroundColor: "rgba(75,192,192,0.4)",
             borderColor: "rgba(75,192,192,1)",
             borderWidth: 1,
           },
+          // Ajoutez plus de datasets si nécessaire
+        ],
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (nutritionData && nutritionData.length > 0) {
+      const dates = nutritionData.map((nutrition) =>
+        new Date(nutrition.date).toLocaleDateString()
+      );
+      const intake = nutritionData.map((nutrition) =>
+        nutrition.meals.reduce((total, meal) => total + meal.calories, 0)
+      );
+
+      setChartData((prevData) => ({
+        ...prevData,
+        datasets: [
+          ...prevData.datasets,
           {
-            label: "Protein",
-            data: protein,
-            backgroundColor: "rgba(153, 102, 255, 0.6)",
-            borderColor: "rgba(153, 102, 255, 1)",
-            borderWidth: 1,
-          },
-          {
-            label: "Carbs",
-            data: carbs,
-            backgroundColor: "rgba(255, 159, 64, 0.6)",
-            borderColor: "rgba(255, 159, 64, 1)",
-            borderWidth: 1,
-          },
-          {
-            label: "Fat",
-            data: fat,
-            backgroundColor: "rgba(255, 99, 132, 0.6)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            label: "Calories Intake",
+            data: intake,
+            backgroundColor: "rgba(153,102,255,0.4)",
+            borderColor: "rgba(153,102,255,1)",
             borderWidth: 1,
           },
         ],
-      });
+      }));
     }
   }, []);
   return (

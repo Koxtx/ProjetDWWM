@@ -4,16 +4,15 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signin } from "../../apis/users";
 import { Link, useNavigate } from "react-router-dom";
-import Modal from "../../components/modal/Modal";
 import { UserContext } from "../../context/UserContext";
+import { toast } from "react-toastify"; // Importer toast
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Connexion() {
-  const [feedback, setFeedback] = useState("");
-  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const { setConnectedUser } = useContext(UserContext);
 
-  // schéma de validation
+  // Schéma de validation
   const schema = yup.object({
     email: yup
       .string()
@@ -23,13 +22,13 @@ export default function Connexion() {
     password: yup.string().required("Required"),
   });
 
-  //   valeurs par défaut
+  // Valeurs par défaut
   const defaultValues = {
     email: "",
     password: "",
   };
 
-  //   méthodes utilisées par useForm et options : resolver fait le lien entre le formulaire et le schéma
+  // Méthodes utilisées par useForm et options : resolver fait le lien entre le formulaire et le schéma
   const {
     register,
     handleSubmit,
@@ -41,34 +40,25 @@ export default function Connexion() {
     resolver: yupResolver(schema),
   });
 
-  //   fonction de validation de formulaire
+  // Fonction de validation de formulaire
   async function submit(values) {
-    // console.log(values);
     try {
       const response = await signin(values);
-      // console.log(response);
       if (!response.message) {
         localStorage.setItem("user", JSON.stringify(response));
         setConnectedUser(response.user);
-        setFeedback("Connexion réussie");
+        toast.success("Connexion réussie!"); // Afficher une notification de succès
         reset(defaultValues);
-        setShowModal(true);
+        navigate("/");
       } else {
-        setFeedback(response.message);
-        setShowModal(true);
+        toast.error(response.message); // Afficher une notification d'erreur
       }
-      setShowModal(true);
     } catch (error) {
+      toast.error("Une erreur est survenue. Veuillez réessayer."); // Gérer les erreurs inattendues
       console.error(error);
     }
   }
 
-  function handleCloseModal() {
-    setShowModal(false);
-    if (feedback === "Connexion réussie") {
-      navigate("/");
-    }
-  }
   return (
     <main className="d-flex flex-column center flex-fill">
       <form onSubmit={handleSubmit(submit)}>
@@ -103,16 +93,6 @@ export default function Connexion() {
           mot de passe oublié
         </Link>
       </form>
-      {showModal && (
-        <Modal onClose={handleCloseModal} feedback={feedback}>
-          <button
-            className={`btn btn-reverse-primary`}
-            onClick={handleCloseModal}
-          >
-            X
-          </button>
-        </Modal>
-      )}
     </main>
   );
 }

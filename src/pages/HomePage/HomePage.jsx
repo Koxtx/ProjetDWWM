@@ -3,7 +3,10 @@ import styles from "./HomePage.module.scss";
 import WomanHaltero from "../../image/woman-haltero.jpg";
 
 import { UserContext } from "../../context/UserContext";
-import AddWorkout from "../Workouts/AddWorkout";
+import GoalList from "../../components/Goal/GoalList";
+import AddGoal from "../../components/Goal/AddGoal";
+import ExerciseList from "../../components/Exercises/ExerciseList";
+import AddExercisde from "../../components/Exercises/AddExercisde";
 
 export default function HomePage() {
   const { user } = useContext(UserContext);
@@ -17,7 +20,10 @@ export default function HomePage() {
           alt="Woman haltero"
         />
       </section>
-      <AddWorkout />
+      <GoalList />
+      <AddGoal />
+      <ExerciseList />
+      <AddExercisde />
     </main>
   );
 }
