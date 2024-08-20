@@ -22,32 +22,9 @@ export default function Header() {
           </NavLink>
           {user ? (
             <>
-              <NavLink className=" btn mr-60" to="/Séance">
+              <NavLink className=" btn mr-60" to="/workout">
                 Séance
               </NavLink>
-              <NavLink className="btn mr-60 " to="/Alimentation">
-                Alimentation
-              </NavLink>
-              <NavLink className="btn mr-60 " to="/favorites">
-                Favorites
-              </NavLink>
-            </>
-          ) : null}
-
-          <NavLink className="btn mr-60 " to="/Exercices">
-            Exercices
-          </NavLink>
-          <NavLink className="btn " to="/Recettes">
-            Recettes
-          </NavLink>
-        </nav>
-      </div>
-      <div
-        className={`d-flex flex-fill flex-row justify-content-end align-items-center  p-10 ${styles.nav2}`}
-      >
-        <nav className={` p-10 `}>
-          {user ? (
-            <>
               <NavLink className="mr-15" to="/profile">
                 <span>Profile</span>
               </NavLink>

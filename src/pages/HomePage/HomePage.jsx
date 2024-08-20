@@ -3,17 +3,10 @@ import styles from "./HomePage.module.scss";
 import WomanHaltero from "../../image/woman-haltero.jpg";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
+import AddWorkout from "../Workouts/AddWorkout";
 
 export default function HomePage() {
   const { user } = useContext(UserContext);
-  const currentDay = new Date().toLocaleString("fr-FR", { weekday: "long" });
-  const todaySeance = seances.find(
-    (seance) => seance.day.toLowerCase() === currentDay.toLowerCase()
-  );
-
-  if (loading) {
-    return <p>Chargement des séances...</p>;
-  }
 
   return (
     <main>
@@ -24,6 +17,7 @@ export default function HomePage() {
           alt="Woman haltero"
         />
       </section>
+      <AddWorkout />
 
       <div>
         <ul>
