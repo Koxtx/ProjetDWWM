@@ -1,51 +1,53 @@
-import React, { useContext, useEffect } from "react";
-import { NutritionContext } from "../../context/NutritionContext";
+import React, { useContext, useEffect, useState } from "react";
+
 import AddNutrition from "./AddNutrition";
+import { getNutrition } from "../../apis/nutrition";
+import { UserContext } from "../../context/UserContext";
 
 export default function NutritionList() {
-  const { nutritionData, fetchNutrition, loading } =
-    useContext(NutritionContext);
+  const [meals, setMeals] = useState([]);
+  const { token } = useContext(UserContext);
 
   useEffect(() => {
-    fetchNutrition();
+    async function fetchMeals() {
+      try {
+        const data = await getNutrition(token);
+        if (Array.isArray(data)) {
+          setMeals(data);
+        } else {
+          console.error("Unexpected data format:", data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch meals:", error);
+      }
+    }
+    fetchMeals();
   }, []);
 
-  if (loading)
-    return <p className="d-flex flex-column center flex-fill">Loading...</p>;
   return (
     <main className="d-flex flex-column center flex-fill">
       <AddNutrition />
-      {nutritionData.length > 0 ? (
-        nutritionData.map((nutritionItem) => (
-          <div key={nutritionItem._id}>
-            <h3>Date: {new Date(nutritionItem.date).toLocaleDateString()}</h3>
-            {nutritionItem.meals.length > 0 ? (
-              nutritionItem.meals.map((meal, index) => (
-                <div key={index}>
-                  <p>
-                    <strong>Meal:</strong> {meal.name}
-                  </p>
-                  <p>
-                    <strong>Calories:</strong> {meal.calories}
-                  </p>
-                  <p>
-                    <strong>Protein:</strong> {meal.protein}g
-                  </p>
-                  <p>
-                    <strong>Carbs:</strong> {meal.carbs}g
-                  </p>
-                  <p>
-                    <strong>Fat:</strong> {meal.fat}g
-                  </p>
-                </div>
-              ))
-            ) : (
-              <p>No meals found</p>
-            )}
+      <h2>Your Meals</h2>
+      {meals.length === 0 ? (
+        <p>No meals found or failed to load meals.</p>
+      ) : (
+        meals.map((meal) => (
+          <div key={meal._id}>
+            <h3>{meal.name}</h3>
+            <ul>
+              {meal.ingredients.map((ingredient) => (
+                <li key={ingredient.ingredient}>
+                  {ingredient.ingredient.name}
+                </li>
+              ))}
+            </ul>
+            <p>Total Calories: {meal.totalCalories}</p>
+            <p>
+              Protein: {meal.totalProtein}g, Carbs: {meal.totalCarbs}g, Fat:{" "}
+              {meal.totalFat}g
+            </p>
           </div>
         ))
-      ) : (
-        <p>No nutrition data found</p>
       )}
     </main>
   );
