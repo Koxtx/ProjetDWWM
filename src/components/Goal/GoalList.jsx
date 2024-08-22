@@ -7,7 +7,7 @@ export default function GoalList() {
 
   return (
     <div>
-      {goals.map((goal) => (
+      {/* {goals.map((goal) => (
         <div key={goal._id}>
           <h3>{goal.type}</h3>
           <p>Target: {goal.target}</p>
@@ -16,7 +16,7 @@ export default function GoalList() {
             Increase Progress
           </button>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }

@@ -13,15 +13,17 @@ export const postWorkout = async (workoutData, token) => {
   return response.json();
 };
 
-export const getWorkouts = async (page, limit, sortBy, order, token) => {
-  const response = await fetch(
-    `${API_URL}?page=${page}&limit=${limit}&sortBy=${sortBy}&order=${order}`,
-    {
-      method: "GET",
-      headers: {
-        "x-auth-token": token,
-      },
-    }
-  );
+export const getWorkouts = async (token) => {
+  const response = await fetch(`${API_URL}/`, {
+    method: "GET",
+    headers: {
+      "x-auth-token": token,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch workouts");
+  }
+
   return response.json();
 };
