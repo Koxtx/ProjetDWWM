@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { WorkoutsContext } from "../../context/WorkoutsContext";
+
 import { postWorkout } from "../../apis/workouts";
 import { getExercises } from "../../apis/exercises";
 import { UserContext } from "../../context/UserContext";
@@ -9,6 +9,23 @@ export default function AddWorkout() {
   const [selectedExercises, setSelectedExercises] = useState([]);
   const [workoutName, setWorkoutName] = useState("");
   const { token } = useContext(UserContext);
+  useEffect(() => {
+    async function fetchExercises() {
+      try {
+        const data = await getExercises(token); // Passez le token ici
+        console.log("Exercises fetched:", data);
+        setExercises(data);
+      } catch (error) {
+        console.error("Failed to fetch exercises:", error);
+      }
+    }
+
+    if (token) {
+      fetchExercises();
+    } else {
+      console.error("No token available to fetch exercises");
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

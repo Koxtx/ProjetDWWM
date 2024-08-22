@@ -1,13 +1,19 @@
 // src/apis/exercises.js
 const API_URL = "http://localhost:5000/api/exercice";
 
-export const getExercises = async () => {
+export const getExercises = async (token) => {
   const response = await fetch(`${API_URL}/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "x-auth-token": token, // Ajout du token ici
     },
   });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch exercises");
+  }
+
   return response.json();
 };
 
