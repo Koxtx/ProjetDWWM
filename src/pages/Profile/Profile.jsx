@@ -4,6 +4,7 @@ import PaginatedWorkoutList from "../../components/Dashboard/PaginatedWorkoutLis
 import { getUserProfile, updateUserProfile } from "../../apis/private";
 import { UserContext } from "../../context/UserContext";
 import ExerciseDashboard from "../../components/Dashboard/ExerciseDashboard";
+import UserProgress from "../../components/Progress/UserProgress";
 
 export default function Profile() {
   const { user, token, setConnectedUser } = useContext(UserContext);
@@ -33,6 +34,7 @@ export default function Profile() {
   return (
     <main>
       <h2>Profile</h2>
+      <UserProgress />
       <ExerciseDashboard />
       <Dashboard />
       <PaginatedWorkoutList />
