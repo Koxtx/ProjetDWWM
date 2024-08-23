@@ -7,6 +7,7 @@ import GoalList from "../../components/Goal/GoalList";
 import AddGoal from "../../components/Goal/AddGoal";
 import ExerciseList from "../../components/Exercises/ExerciseList";
 import AddExercisde from "../../components/Exercises/AddExercisde";
+import SearchExercises from "../../components/Exercises/SearchExercises";
 
 export default function HomePage() {
   const { user } = useContext(UserContext);
@@ -22,6 +23,7 @@ export default function HomePage() {
       </section>
       <GoalList />
       <AddGoal />
+      <SearchExercises />
       <ExerciseList />
       <AddExercisde />
     </main>

@@ -14,10 +14,11 @@ export const postWorkout = async (workoutData, token) => {
 };
 
 export const getWorkouts = async (token) => {
-  const response = await fetch(`${API_URL}/`, {
+  const response = await fetch("http://localhost:5000/api/workout/", {
     method: "GET",
     headers: {
-      "x-auth-token": token,
+      "Content-Type": "application/json",
+      "x-auth-token": token, // Assurez-vous que le token est correctement passé ici
     },
   });
 

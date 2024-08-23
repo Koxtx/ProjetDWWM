@@ -3,6 +3,7 @@ import Dashboard from "../../components/Dashboard/Dashboard";
 import PaginatedWorkoutList from "../../components/Dashboard/PaginatedWorkoutList";
 import { getUserProfile, updateUserProfile } from "../../apis/private";
 import { UserContext } from "../../context/UserContext";
+import ExerciseDashboard from "../../components/Dashboard/ExerciseDashboard";
 
 export default function Profile() {
   const { user, token, setConnectedUser } = useContext(UserContext);
@@ -32,6 +33,7 @@ export default function Profile() {
   return (
     <main>
       <h2>Profile</h2>
+      <ExerciseDashboard />
       <Dashboard />
       <PaginatedWorkoutList />
       <form onSubmit={handleSubmit}>
