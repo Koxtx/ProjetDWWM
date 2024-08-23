@@ -27,31 +27,83 @@ export default function SearchExercises() {
     <div>
       <input
         name="name"
-        placeholder="Exercise Name"
+        placeholder="Nom de l'exercice"
         value={filters.name}
         onChange={handleChange}
       />
       <select name="category" value={filters.category} onChange={handleChange}>
-        <option value="">Select Category</option>
-        {/* Ajoutez les options de catégorie */}
+        <option value="">Sélectionnez la catégorie</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Musculation">Musculation</option>
+        <option value="Souplesse">Souplesse</option>
+        <option value="Endurance">Endurance</option>
+        {/* Ajoutez d'autres catégories si nécessaire */}
       </select>
       <select
         name="primaryMuscle"
         value={filters.primaryMuscle}
         onChange={handleChange}
       >
-        <option value="">Select Muscle</option>
-        {/* Ajoutez les options de muscle */}
+        <option value="">Sélectionnez le muscle principal</option>
+        <option value="Pectoraux">Pectoraux</option>
+        <option value="Dos">Dos</option>
+        <option value="Jambes">Jambes</option>
+        <option value="Épaules">Épaules</option>
+        <option value="Abdominaux">Abdominaux</option>
+        {/* Ajoutez d'autres muscles si nécessaire */}
       </select>
-      {/* Ajoutez les autres filtres ici */}
-      <button onClick={handleSearch}>Search</button>
+      <select
+        name="equipment"
+        value={filters.equipment}
+        onChange={handleChange}
+      >
+        <option value="">Sélectionnez l'équipement</option>
+        <option value="Haltères">Haltères</option>
+        <option value="Barre">Barre</option>
+        <option value="Machine">Machine</option>
+        <option value="Aucun">Aucun</option>
+        {/* Ajoutez d'autres équipements si nécessaire */}
+      </select>
+      <select
+        name="difficulty"
+        value={filters.difficulty}
+        onChange={handleChange}
+      >
+        <option value="">Sélectionnez la difficulté</option>
+        <option value="Débutant">Débutant</option>
+        <option value="Intermédiaire">Intermédiaire</option>
+        <option value="Avancé">Avancé</option>
+      </select>
+      <button onClick={handleSearch}>Rechercher</button>
 
       <div>
         {results.map((exercise) => (
           <div key={exercise._id}>
             <h3>{exercise.name}</h3>
             <p>{exercise.description}</p>
-            {/* Affichez d'autres détails de l'exercice */}
+            <p>Muscle principal: {exercise.primaryMuscle}</p>
+            <p>Équipement: {exercise.equipment}</p>
+            <p>Difficulté: {exercise.difficulty}</p>
+            <p>
+              Durée:{" "}
+              {exercise.duration ? `${exercise.duration} minutes` : "N/A"}
+            </p>
+            {exercise.imageUrl && (
+              <img
+                src={exercise.imageUrl}
+                alt={exercise.name}
+                style={{ width: "100px" }}
+              />
+            )}
+            {exercise.videoUrl && (
+              <a
+                href={exercise.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir la vidéo
+              </a>
+            )}
           </div>
         ))}
       </div>

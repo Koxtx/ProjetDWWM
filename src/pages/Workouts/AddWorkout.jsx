@@ -76,7 +76,7 @@ export default function AddWorkout() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Workout Name"
+        placeholder="Nom de l'entraînement"
         value={workoutName}
         onChange={(e) => setWorkoutName(e.target.value)}
         required
@@ -137,7 +137,7 @@ export default function AddWorkout() {
           )}
         </div>
       ))}
-      <button type="submit">Create Workout</button>
+      <button type="submit">Créer l'entraînement</button>
     </form>
   );
 }

@@ -15,12 +15,7 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 export default function ExerciseDashboard() {
   const [workouts, setWorkouts] = useState([]);
-  const { token, setToken } = useContext(UserContext);
-
-  const handleLogin = async () => {
-    const response = await loginUser(credentials);
-    setToken(response.token); // Assurez-vous que le token est correctement stocké
-  };
+  const { token } = useContext(UserContext);
 
   useEffect(() => {
     async function fetchWorkouts() {
@@ -33,8 +28,8 @@ export default function ExerciseDashboard() {
         setWorkouts(data || []);
       } catch (error) {
         if (error.message.includes("401")) {
-          console.error("Token is invalid or expired");
-          // Rediriger vers la page de connexion ou rafraîchir le token
+          console.error("Token is invalid or expired. Please log in again.");
+          // Optionnel: Rediriger l'utilisateur vers la page de connexion ou rafraîchir le token
         } else {
           console.error("Failed to fetch workouts:", error);
         }
