@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./HomePage.module.scss";
-import WomanHaltero from "../../image/woman-haltero.jpg";
+
 
 import { UserContext } from "../../context/UserContext";
 import GoalList from "../../components/Goal/GoalList";
@@ -14,13 +14,7 @@ export default function HomePage() {
 
   return (
     <main>
-      <section>
-        <img
-          src={WomanHaltero}
-          className={`${styles.image}`}
-          alt="Woman haltero"
-        />
-      </section>
+     
       <GoalList />
       <AddGoal />
       <SearchExercises />

@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins" as mixin;
+
 main {
   display: flex;
   flex-direction: column;

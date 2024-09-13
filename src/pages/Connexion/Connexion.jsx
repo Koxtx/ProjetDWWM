@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { signin } from "../../apis/users";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
-import { toast } from "react-toastify"; // Importer toast
+import { toast } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Connexion() {
