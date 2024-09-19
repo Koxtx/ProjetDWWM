@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
-import Dashboard from "../../components/Dashboard/Dashboard";
-import PaginatedWorkoutList from "../../components/Dashboard/PaginatedWorkoutList";
+
+
 import { getUserProfile, updateUserProfile } from "../../apis/private";
 import { UserContext } from "../../context/UserContext";
-import ExerciseDashboard from "../../components/Dashboard/ExerciseDashboard";
-import UserProgress from "../../components/Progress/UserProgress";
+
+import GoalList from "../../components/Goal/GoalList";
+import AddGoal from "../../components/Goal/AddGoal";
 
 export default function Profile() {
   const { user, token, setConnectedUser } = useContext(UserContext);
   const [formData, setFormData] = useState({ username: "", email: "" });
+  const [showForm, setShowForm] = useState(false); // État pour contrôler l'affichage du formulaire
+
   useEffect(() => {
     const loadProfile = async () => {
       const response = await getUserProfile(token);
@@ -17,7 +20,7 @@ export default function Profile() {
       }
     };
     loadProfile();
-  }, []);
+  }, [token]);
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,32 +30,47 @@ export default function Profile() {
     try {
       const updatedUser = await updateUserProfile(formData, token);
       setConnectedUser(updatedUser); // Met à jour le contexte utilisateur
+      setShowForm(false); // Cache le formulaire après la mise à jour
     } catch (error) {
       console.error("Failed to update profile:", error);
     }
   };
+
   return (
     <main>
-      <h2>Profile</h2>
-      <UserProgress />
-      <ExerciseDashboard />
-      <Dashboard />
-      <PaginatedWorkoutList />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <button type="submit">Update Profile</button>
-      </form>
+      <h2>Profil</h2>
+      <GoalList />
+      <AddGoal />
+
+      {/* Bouton pour afficher le formulaire */}
+      {!showForm && (
+        <button onClick={() => setShowForm(true)}>Modifier le profil</button>
+      )}
+
+      {/* Affichage conditionnel du formulaire */}
+      {showForm && (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Mettre à jour le profil</button>
+          {/* Bouton pour cacher le formulaire */}
+          <button type="button" onClick={() => setShowForm(false)}>
+            Annuler
+          </button>
+        </form>
+      )}
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import Select from "react-select";
 import { postWorkout } from "../../apis/workouts";
 import { getExercises } from "../../apis/exercises";
 import { UserContext } from "../../context/UserContext";
@@ -13,18 +14,30 @@ export default function AddWorkout() {
     async function fetchExercises() {
       try {
         const data = await getExercises(token);
-        setExercises(data);
+        setExercises(data.map(exercise => ({ value: exercise._id, label: exercise.name })));
       } catch (error) {
-        console.error("Failed to fetch exercises:", error);
+        console.error("Échec du chargement des exercices:", error);
       }
     }
 
     if (token) {
       fetchExercises();
     } else {
-      console.error("No token available to fetch exercises");
+      console.error("Aucun token disponible pour récupérer les exercices");
     }
   }, [token]);
+
+  const handleSelectExercise = (selectedOptions) => {
+    const selectedData = selectedOptions.map(option => ({
+      id: option.value,
+      name: option.label,
+      sets: 0,
+      reps: 0,
+      weight: 0,
+    }));
+
+    setSelectedExercises(selectedData);
+  };
 
   const handleExerciseChange = (id, field, value) => {
     setSelectedExercises((prev) =>
@@ -34,23 +47,10 @@ export default function AddWorkout() {
     );
   };
 
-  const handleSelectExercise = (id) => {
-    if (selectedExercises.some((exercise) => exercise.id === id)) {
-      setSelectedExercises((prev) =>
-        prev.filter((exercise) => exercise.id !== id)
-      );
-    } else {
-      setSelectedExercises((prev) => [
-        ...prev,
-        { id, sets: 0, reps: 0, weight: 0 },
-      ]);
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!token) {
-      console.error("No token available");
+      console.error("Aucun token disponible");
       return;
     }
 
@@ -66,9 +66,9 @@ export default function AddWorkout() {
 
     try {
       const response = await postWorkout(workoutData, token);
-      console.log("Workout created:", response);
+      console.log("Entraînement créé:", response);
     } catch (error) {
-      console.error("Failed to create workout:", error);
+      console.error("Échec de la création de l'entraînement:", error);
     }
   };
 
@@ -82,61 +82,56 @@ export default function AddWorkout() {
         required
       />
 
-      {exercises.map((exercise) => (
-        <div key={exercise._id}>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleSelectExercise(exercise._id)}
-            />
-            {exercise.name}
-          </label>
+      <label>Choisir des exercices :</label>
+      <Select
+        isMulti
+        options={exercises}
+        onChange={handleSelectExercise}
+      />
 
-          {selectedExercises.some((e) => e.id === exercise._id) && (
-            <div>
+      {selectedExercises.length > 0 && (
+        <div>
+          {selectedExercises.map((exercise) => (
+            <div key={exercise.id} className="exercise-card">
+              <h4>{exercise.name}</h4>
               <label>
-                Sets:
+                Séries:
                 <input
                   type="number"
-                  value={
-                    selectedExercises.find((e) => e.id === exercise._id).sets
-                  }
+                  value={exercise.sets}
                   onChange={(e) =>
-                    handleExerciseChange(exercise._id, "sets", e.target.value)
+                    handleExerciseChange(exercise.id, "sets", e.target.value)
                   }
                   required
                 />
               </label>
               <label>
-                Reps:
+                Répétitions:
                 <input
                   type="number"
-                  value={
-                    selectedExercises.find((e) => e.id === exercise._id).reps
-                  }
+                  value={exercise.reps}
                   onChange={(e) =>
-                    handleExerciseChange(exercise._id, "reps", e.target.value)
+                    handleExerciseChange(exercise.id, "reps", e.target.value)
                   }
                   required
                 />
               </label>
               <label>
-                Weight (kg):
+                Poids (kg):
                 <input
                   type="number"
-                  value={
-                    selectedExercises.find((e) => e.id === exercise._id).weight
-                  }
+                  value={exercise.weight}
                   onChange={(e) =>
-                    handleExerciseChange(exercise._id, "weight", e.target.value)
+                    handleExerciseChange(exercise.id, "weight", e.target.value)
                   }
                   required
                 />
               </label>
             </div>
-          )}
+          ))}
         </div>
-      ))}
+      )}
+
       <button type="submit">Créer l'entraînement</button>
     </form>
   );

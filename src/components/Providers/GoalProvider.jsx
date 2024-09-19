@@ -21,8 +21,12 @@ export default function GoalProvider({ children }) {
   }, []);
 
   const addGoal = async (goalData) => {
-    const response = await postGoal(goalData, token);
-    setGoals([...goals, response]);
+    try {
+      const newGoal = await postGoal(goalData, token);
+      setGoals((prevGoals) => [...prevGoals, newGoal]); // Ajoute l'objectif au state local
+    } catch (error) {
+      console.error("Failed to add goal:", error);
+    }
   };
 
   const updateGoal = async (goalId, progress) => {
