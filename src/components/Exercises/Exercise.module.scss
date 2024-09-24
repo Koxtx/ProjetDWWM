@@ -13,6 +13,9 @@
     margin: 20px;
     padding: 10px;
     border: 2px solid black;
+    @include mixin.xs {
+      width: 280px;
+    }
     p {
       font-size: smaller;
     }
