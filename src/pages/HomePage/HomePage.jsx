@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./HomePage.module.scss";
 
-
 import { UserContext } from "../../context/UserContext";
 
 import ExerciseList from "../../components/Exercises/ExerciseList";
@@ -13,11 +12,11 @@ export default function HomePage() {
 
   return (
     <main>
-     
-   <AddExercisde />
-      <SearchExercises />
+      <div className={`d-flex flex-row center mt-30 ${styles.filter}`}>
+        <AddExercisde />
+        <SearchExercises />
+      </div>
       <ExerciseList />
-     
     </main>
   );
 }

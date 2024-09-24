@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-
-
+import styles from "./Profile.module.scss";
 import { getUserProfile, updateUserProfile } from "../../apis/private";
 import { UserContext } from "../../context/UserContext";
 
@@ -10,7 +9,7 @@ import AddGoal from "../../components/Goal/AddGoal";
 export default function Profile() {
   const { user, token, setConnectedUser } = useContext(UserContext);
   const [formData, setFormData] = useState({ username: "", email: "" });
-  const [showForm, setShowForm] = useState(false); // État pour contrôler l'affichage du formulaire
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     const loadProfile = async () => {
@@ -29,8 +28,8 @@ export default function Profile() {
     e.preventDefault();
     try {
       const updatedUser = await updateUserProfile(formData, token);
-      setConnectedUser(updatedUser); // Met à jour le contexte utilisateur
-      setShowForm(false); // Cache le formulaire après la mise à jour
+      setConnectedUser(updatedUser);
+      setShowForm(false);
     } catch (error) {
       console.error("Failed to update profile:", error);
     }
@@ -38,16 +37,14 @@ export default function Profile() {
 
   return (
     <main>
-      <h2>Profil</h2>
-      <GoalList />
-      <AddGoal />
+      <h2>{user.username}</h2>
 
-      {/* Bouton pour afficher le formulaire */}
       {!showForm && (
-        <button onClick={() => setShowForm(true)}>Modifier le profil</button>
+        <button className="btn btn-primary" onClick={() => setShowForm(true)}>
+          Modifier le profil
+        </button>
       )}
 
-      {/* Affichage conditionnel du formulaire */}
       {showForm && (
         <form onSubmit={handleSubmit}>
           <input
@@ -64,13 +61,21 @@ export default function Profile() {
             onChange={handleChange}
             required
           />
-          <button type="submit">Mettre à jour le profil</button>
-          {/* Bouton pour cacher le formulaire */}
-          <button type="button" onClick={() => setShowForm(false)}>
+          <button className="btn btn-primary" type="submit">
+            Mettre à jour le profil
+          </button>
+
+          <button
+            className="btn btn-primary"
+            type="button"
+            onClick={() => setShowForm(false)}
+          >
             Annuler
           </button>
         </form>
       )}
+      <AddGoal />
+      <GoalList />
     </main>
   );
 }

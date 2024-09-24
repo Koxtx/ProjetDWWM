@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { getExercises } from "../../apis/exercises";
+import styles from "./Exercise.module.scss";
+import parse from "html-react-parser";
 
 export default function SearchExercises() {
   const [filters, setFilters] = useState({
@@ -10,7 +12,7 @@ export default function SearchExercises() {
     difficulty: "",
   });
   const [results, setResults] = useState([]);
-  const [showForm, setShowForm] = useState(false); // Formulaire caché par défaut
+  const [showForm, setShowForm] = useState(false);
 
   const handleChange = (e) => {
     setFilters({
@@ -26,26 +28,30 @@ export default function SearchExercises() {
 
   return (
     <div>
-      {/* Bouton pour afficher/cacher le formulaire */}
       {!showForm && (
-        <button onClick={() => setShowForm(true)}>Afficher la recherche d'exercices</button>
+        <button className="btn btn-secondary" onClick={() => setShowForm(true)}>
+          Afficher la recherche d'exercices
+        </button>
       )}
 
       {showForm && (
-        <div>
+        <div className={`${styles.searchexercises} d-flex flex-column center`}>
           <input
             name="name"
             placeholder="Nom de l'exercice"
             value={filters.name}
             onChange={handleChange}
           />
-          <select name="category" value={filters.category} onChange={handleChange}>
+          <select
+            name="category"
+            value={filters.category}
+            onChange={handleChange}
+          >
             <option value="">Sélectionnez la catégorie</option>
             <option value="Cardio">Cardio</option>
             <option value="Musculation">Musculation</option>
             <option value="Souplesse">Souplesse</option>
             <option value="Endurance">Endurance</option>
-            {/* Ajoutez d'autres catégories si nécessaire */}
           </select>
           <select
             name="primaryMuscle"
@@ -58,7 +64,6 @@ export default function SearchExercises() {
             <option value="Jambes">Jambes</option>
             <option value="Épaules">Épaules</option>
             <option value="Abdominaux">Abdominaux</option>
-            {/* Ajoutez d'autres muscles si nécessaire */}
           </select>
           <select
             name="equipment"
@@ -70,7 +75,6 @@ export default function SearchExercises() {
             <option value="Barre">Barre</option>
             <option value="Machine">Machine</option>
             <option value="Aucun">Aucun</option>
-            {/* Ajoutez d'autres équipements si nécessaire */}
           </select>
           <select
             name="difficulty"
@@ -82,19 +86,27 @@ export default function SearchExercises() {
             <option value="Intermédiaire">Intermédiaire</option>
             <option value="Avancé">Avancé</option>
           </select>
-          <button onClick={handleSearch}>Rechercher</button>
+          <button className="btn btn-primary" onClick={handleSearch}>
+            Rechercher
+          </button>
 
-          {/* Bouton pour cacher le formulaire */}
-          <button onClick={() => setShowForm(false)}>Cacher la recherche</button>
+          <button
+            className="btn btn-primary"
+            onClick={() => setShowForm(false)}
+          >
+            Cacher la recherche
+          </button>
         </div>
       )}
 
-      {/* Affichage des résultats de la recherche */}
-      <div>
+      <div className={`${styles.liste}`}>
         {results.map((exercise) => (
-          <div key={exercise._id}>
+          <div
+            key={exercise._id}
+            className={`card dflex  flex-column center ${styles.card}`}
+          >
             <h3>{exercise.name}</h3>
-            <p>{exercise.description}</p>
+            <p>{parse(exercise.description)}</p>
             <p>Muscle principal: {exercise.primaryMuscle}</p>
             <p>Équipement: {exercise.equipment}</p>
             <p>Difficulté: {exercise.difficulty}</p>

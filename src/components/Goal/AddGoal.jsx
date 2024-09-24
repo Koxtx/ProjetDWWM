@@ -1,51 +1,50 @@
 import React, { useContext, useState } from "react";
 import { GoalContext } from "../../context/GoalContext";
-
+import styles from "./Goal.module.scss";
 export default function AddGoal() {
   const [showForm, setShowForm] = useState(false);
   const [type, setType] = useState("");
-  const [targetType, setTargetType] = useState(""); // Pour stocker le type de cible (répétitions, temps, poids, répétitions avec poids)
-  const [reps, setReps] = useState(""); // Pour les répétitions
-  const [weight, setWeight] = useState(""); // Pour le poids
-  const [target, setTarget] = useState(""); // Pour le temps ou autre cible
+  const [targetType, setTargetType] = useState("");
+  const [reps, setReps] = useState("");
+  const [weight, setWeight] = useState("");
+  const [target, setTarget] = useState("");
   const { addGoal } = useContext(GoalContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const goalData = { type, targetType };
 
-    // Ajoute la cible selon le type
     if (targetType === "repetitions") {
       goalData.target = reps;
     } else if (targetType === "time") {
-      goalData.target = target; // Le temps en secondes
+      goalData.target = target;
     } else if (targetType === "weight") {
-      goalData.target = weight; // Poids en kg
+      goalData.target = weight;
     } else if (targetType === "repsWithWeight") {
       goalData.reps = reps;
       goalData.weight = weight;
     }
 
-    await addGoal(goalData); // Appelle l'API avec les données de l'objectif
+    await addGoal(goalData);
     setType("");
     setTargetType("");
     setReps("");
     setWeight("");
     setTarget("");
-    setShowForm(false); // Cache le formulaire après l'ajout
+    setShowForm(false);
   };
 
   return (
     <div>
-      {/* Bouton pour afficher le formulaire */}
       {!showForm && (
-        <button onClick={() => setShowForm(true)}>Ajouter un objectif</button>
+        <button className="btn btn-primary" onClick={() => setShowForm(true)}>
+          Ajouter un objectif
+        </button>
       )}
 
-      {/* Affichage conditionnel du formulaire */}
       {showForm && (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={`${styles.addgoal}`}>
           <input
             type="text"
             placeholder="Type d'objectif"
@@ -54,7 +53,6 @@ export default function AddGoal() {
             required
           />
 
-          {/* Sélection du type de cible */}
           <select
             value={targetType}
             onChange={(e) => setTargetType(e.target.value)}
@@ -67,7 +65,6 @@ export default function AddGoal() {
             <option value="repsWithWeight">Répétitions avec poids</option>
           </select>
 
-          {/* Champ conditionnel pour chaque type de cible */}
           {targetType === "repetitions" && (
             <input
               type="number"
@@ -117,8 +114,14 @@ export default function AddGoal() {
             </div>
           )}
 
-          <button type="submit">Ajouter l'objectif</button>
-          <button type="button" onClick={() => setShowForm(false)}>
+          <button className="btn btn-primary" type="submit">
+            Ajouter l'objectif
+          </button>
+          <button
+            className="btn btn-primary"
+            type="button"
+            onClick={() => setShowForm(false)}
+          >
             Annuler
           </button>
         </form>

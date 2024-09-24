@@ -3,6 +3,7 @@ import Select from "react-select";
 import { postWorkout } from "../../apis/workouts";
 import { getExercises } from "../../apis/exercises";
 import { UserContext } from "../../context/UserContext";
+import styles from "./Workout.module.scss";
 
 export default function AddWorkout() {
   const [exercises, setExercises] = useState([]);
@@ -14,7 +15,12 @@ export default function AddWorkout() {
     async function fetchExercises() {
       try {
         const data = await getExercises(token);
-        setExercises(data.map(exercise => ({ value: exercise._id, label: exercise.name })));
+        setExercises(
+          data.map((exercise) => ({
+            value: exercise._id,
+            label: exercise.name,
+          }))
+        );
       } catch (error) {
         console.error("Échec du chargement des exercices:", error);
       }
@@ -28,7 +34,7 @@ export default function AddWorkout() {
   }, [token]);
 
   const handleSelectExercise = (selectedOptions) => {
-    const selectedData = selectedOptions.map(option => ({
+    const selectedData = selectedOptions.map((option) => ({
       id: option.value,
       name: option.label,
       sets: 0,
@@ -58,6 +64,7 @@ export default function AddWorkout() {
       name: workoutName,
       exercises: selectedExercises.map((exercise) => ({
         exercise: exercise.id,
+        name: exercise.name,
         sets: exercise.sets,
         reps: exercise.reps,
         weight: exercise.weight,
@@ -73,7 +80,7 @@ export default function AddWorkout() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={`${styles.addworkout}`}>
       <input
         type="text"
         placeholder="Nom de l'entraînement"
@@ -85,14 +92,15 @@ export default function AddWorkout() {
       <label>Choisir des exercices :</label>
       <Select
         isMulti
+        className={`mr-10 ${styles.select}`}
         options={exercises}
         onChange={handleSelectExercise}
       />
 
       {selectedExercises.length > 0 && (
-        <div>
+        <div className={`${styles.sets}`}>
           {selectedExercises.map((exercise) => (
-            <div key={exercise.id} className="exercise-card">
+            <div key={exercise.id} className={`${styles.sets}`}>
               <h4>{exercise.name}</h4>
               <label>
                 Séries:
@@ -132,7 +140,9 @@ export default function AddWorkout() {
         </div>
       )}
 
-      <button type="submit">Créer l'entraînement</button>
+      <button className="btn btn-primary" type="submit">
+        Créer l'entraînement
+      </button>
     </form>
   );
 }

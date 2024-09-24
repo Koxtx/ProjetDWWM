@@ -1,0 +1,21 @@
+@use "../../assets/styles/mixins" as mixin;
+main {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+  button {
+    margin-bottom: 20px;
+  }
+  form {
+    @include mixin.xs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

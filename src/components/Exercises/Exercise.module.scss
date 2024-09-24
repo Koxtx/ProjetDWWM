@@ -1,0 +1,48 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.liste {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .card {
+    width: 400px;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    p {
+      font-size: smaller;
+    }
+  }
+}
+
+.addexercise {
+  margin: 10px;
+  input {
+    margin-top: 10px;
+  }
+
+  textarea {
+    margin-top: 10px;
+  }
+  button {
+    margin-top: 10px;
+  }
+}
+
+.searchexercises {
+  margin: 10px;
+  input {
+    margin-top: 10px;
+  }
+
+  select {
+    margin-top: 10px;
+  }
+  button {
+    margin-top: 10px;
+  }
+}

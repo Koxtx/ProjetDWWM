@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ExerciseContext } from "../../context/ExerciseContext";
+import styles from "./Exercise.module.scss";
 
 export default function AddExercise() {
   const [showForm, setShowForm] = useState(false); // Formulaire caché par défaut
@@ -35,14 +36,20 @@ export default function AddExercise() {
     <div>
       {/* Bouton pour afficher le formulaire */}
       {!showForm && (
-        <button onClick={() => setShowForm(true)}>
+        <button
+          className="btn btn-primary mr-15 "
+          onClick={() => setShowForm(true)}
+        >
           Ajouter un exercice
         </button>
       )}
 
       {/* Affichage conditionnel du formulaire */}
       {showForm && (
-        <form onSubmit={handleSubmit}>
+        <form
+          className={`${styles.addexercise} d-flex flex-column center`}
+          onSubmit={handleSubmit}
+        >
           <input
             type="text"
             placeholder="Nom"
@@ -80,9 +87,15 @@ export default function AddExercise() {
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
           />
-          <button type="submit">Ajouter l'exercice</button>
-          {/* Bouton pour cacher le formulaire */}
-          <button type="button" onClick={() => setShowForm(false)}>
+          <button className="btn btn-primary" type="submit">
+            Ajouter l'exercice
+          </button>
+
+          <button
+            className="btn btn-primary"
+            type="button"
+            onClick={() => setShowForm(false)}
+          >
             Annuler
           </button>
         </form>

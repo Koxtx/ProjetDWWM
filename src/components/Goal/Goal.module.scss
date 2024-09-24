@@ -1,0 +1,71 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.listegoal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  .goal {
+    width: 400px;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    @include mixin.xs {
+      width: 200px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    p {
+      font-size: smaller;
+    }
+  }
+}
+
+.addgoal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  @include mixin.xs {
+    flex-direction: column;
+  }
+  input {
+    margin-right: 10px;
+    @include mixin.xs {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+  label {
+    margin-right: 10px;
+    @include mixin.xs {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    select {
+      margin-right: 10px;
+      @include mixin.xs {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  button {
+    margin-right: 10px;
+    @include mixin.xs {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .btnform {
+    margin: 0;
+    @include mixin.xs {
+      width: 100px;
+    }
+  }
+}
