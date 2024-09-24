@@ -36,7 +36,7 @@ export default function Profile() {
   };
 
   return (
-    <main>
+    <main className="mhFull">
       <h2>{user.username}</h2>
 
       {!showForm && (
